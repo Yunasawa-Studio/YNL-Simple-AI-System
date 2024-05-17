@@ -18,10 +18,12 @@ Contact us: <kbd> yunasawa200@gmail.com </kbd>
   <img width="100%" src="https://repobeats.axiom.co/api/embed/d0f110139d656fe23e7b1e2a79261457141a9f9e.svg">
 </details>
 
+<!--
 <h2> ★ Contents </h2>
 <ul>
 <li><a href="#installation"> ★ Installation </a></li>
 </ul>
+-->
 
 <details>
 <summary><h2><div id="installation"> ★ Installation </div></h2></summary>
