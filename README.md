@@ -10,12 +10,12 @@
 
 <h2> ★ About </h2>
 
-A product made by Yunasawa Studio, those contains helpful extensions, utilities, addons that solve your several problems can appear in your developing progress. <br>
+A product made by Yunasawa Studio, provides you a simple AI system and an easy-use Editor to work with. <br>
 Contact us: <kbd> yunasawa200@gmail.com </kbd>
 
 <details>
   <summary><i> Repositiy Stats </i></summary>
-  <img width="100%" src="https://repobeats.axiom.co/api/embed/c7646d75ac5ab1488276211475dd3969c8290c8c.svg">
+  <img width="100%" src="https://repobeats.axiom.co/api/embed/d0f110139d656fe23e7b1e2a79261457141a9f9e.svg">
 </details>
 
 <h2> ★ Contents </h2>
@@ -28,7 +28,7 @@ Contact us: <kbd> yunasawa200@gmail.com </kbd>
 Git URL:
 
 ```
-https://github.com/Yunasawa/YNL-Utilities
+[https://github.com/Yunasawa/YNL-Utilities](https://github.com/Yunasawa-Studio/YNE-Simple-AI-System)
 ```
 
 Here is how you can do it: <a href="https://docs.unity3d.com/2019.3/Documentation/Manual/upm-ui-giturl.html"> How to install a package via Git URL </a>
@@ -40,12 +40,12 @@ You can add UPM Scrope like this:
 ```
 Name: YunasawaStudio
 URL: https://package.openupm.com
-Scope(s): com.yunasawa.ynl.utilities
+Scope(s): com.yunasawa.yne
 ```
 
 Here is how you can do it: <a href="https://openupm.com/docs/getting-started.html#installing-a-upm-package"> How to register a UPM scope(s) </a>
 
 After you register the scope, you can add the package by name: 
 ```
-com.yunasawa.ynl.utilities
+com.yunasawa.yne.simpleaisystem
 ```
