@@ -1,0 +1,151 @@
+﻿.Main
+{
+	background-color: transparent;
+	border-color: transparent;
+
+	height: 40px;
+
+	margin: 0px;
+
+	flex-direction: row;
+}
+
+.Delete
+{
+	background-color: #4A4A4A;
+	background-image: resource("Textures/Icons/X");
+	background-size: 50%;
+
+	border-width: 1.5px;
+	border-color: transparent;
+	border-radius: 5px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+
+	height: 35px;
+	width: 20px;
+
+	margin-left: -2.5px;
+
+	align-self: center;
+
+	position: absolute;
+}
+.Delete:hover
+{
+	border-color: #7f7f7f;
+}
+
+.Background
+{
+	background-color: #2a2a2a;
+	border-width: 1.5px;
+	border-color: transparent;
+	border-radius: 5px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+
+	height: 35px;
+	width: auto;
+
+	flex-grow: 1;
+
+	margin: 0px;
+	margin-left: 17.5px;
+	margin-right: -2.5px;
+
+	flex-direction: row;
+
+	align-self: center;
+
+	transition-property: background-color;
+	transition-duration: 0.25s;
+}
+.Background:hover
+{
+	border-color: #7f7f7f;
+}
+.Background_Selected
+{
+	background-color: #1f1f1f;
+}
+.Background_Selected:hover
+{
+	border-color: #7f7f7f;
+}
+
+.Icon
+{
+	background-color: transparent;
+	
+	width: 25px;
+	height: 25px;
+
+	margin: 2.5px;
+	margin-left: -2.5px;
+	margin-top: 3px;
+
+	transition-property: width, height, margin-top;
+	transition-duration: 0.15s;
+}
+.Icon_Selected
+{
+	width: 30px;
+	height: 30px;
+
+	margin-top: 0px;
+}
+
+.Title
+{
+	color: #ffffff;
+	-unity-font-definition: var(--font-nightmare-pills);
+	-unity-font-style: bold;
+	font-size: 13px;
+
+	margin-top: 2.5px;
+	margin-left: 35px;
+
+	align-self: center;
+
+	position: absolute;
+
+	transition-property: font-size;
+	transition-duration: 0.15s;
+}
+.Title_Selected
+{
+	font-size: 15px;
+}
+
+.Rename
+{
+	background-color: transparent;
+	background-image: resource("Textures/Icons/Pencil");
+	border-color: transparent;
+	background-size: 50%;
+
+	width: 30px;
+	height: 30px;
+
+	margin-left: 130px;
+
+	position: absolute;
+
+	align-self: center;
+}
+
+.Input
+{
+	background-color: #151515;
+
+	max-width: 100%;
+	min-height: 20px;
+
+	margin-left: 40px;
+	margin-right: 10px;
+
+	position: absolute;
+
+	align-self: center;
+}

@@ -1,0 +1,45 @@
+.Main
+{
+	width: 100%;
+
+	margin-top: 10px;
+}
+
+.Background
+{
+	background-color: transparent;
+
+	width: 100%;
+	height: 100%;
+}
+
+.Add
+{
+	background-color: #4a4a4a;
+	border-color: transparent;
+	border-width: 1.5px;
+
+	height: 25px;
+
+	margin: 2.5px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+	-unity-font-definition: var(--font-nightmare-pills);
+	-unity-font-style: bold;
+	font-size: 15px;
+
+	transition-property: font-size;
+	transition-duration: 0.25s;
+}
+.Add:hover
+{
+	border-color: #7f7f7f;
+	border-width: 1.5px;
+
+	font-size: 17px;
+}
+.Add:active
+{
+	background-color: #3F3F3F;
+}

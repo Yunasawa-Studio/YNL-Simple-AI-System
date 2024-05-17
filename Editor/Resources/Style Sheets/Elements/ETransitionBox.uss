@@ -1,0 +1,350 @@
+﻿.Main
+{
+	background-color: #353535;
+
+	border-color: #4a4a4a;
+	border-width: 1px;
+	border-radius: 0px;
+
+	width: auto;
+	height: auto;
+
+	margin: 1px;
+
+	padding: 0px;
+
+	flex-grow: 1;
+	flex-shrink: 1;
+
+	transition-property: border-color;
+	transition-duration: 0.1s;
+}
+.Main__OnExpand
+{
+	border-color: #5f5f5f;
+}
+
+.LabelBackground
+{
+	background-color: #5f5f5f;
+	border-width: 0px;
+	border-color: transparent;
+
+	width: 100%;
+	height: 20px;
+
+	border-radius: 0px;
+
+	flex-direction: row;
+
+	position: absolute;
+
+	transition-property: height, background-color;
+	transition-duration: 0.25s;
+}
+
+.Delete
+{
+	background-color: #4f4f4f;
+	border-radius: 0px;
+	border-width: 0px;
+	border-color: transparent;
+
+	width: 20px;
+	height: 20px;
+
+	margin: 0px;
+
+	background-image: resource("Textures/Icons/X");
+	background-size: 75%;
+
+	transition-property: height, -unity-background-image-tint-color;
+	transition-duration: 0.25s;
+}
+.Delete:hover
+{
+	-unity-background-image-tint-color: #ff7373;
+}
+.Delete__HoverOnTitle
+{
+	height: 40px;
+}
+
+.Expander
+{
+	background-color: #252525;
+	border-width: 1px;
+	border-color: transparent;
+	border-left-color: #404040;
+
+	background-image: resource("Textures/Icons/Arrow2 - Down");
+	background-size: 75%;
+
+	width: 20px;
+	height: 20px;
+
+	right: 0px;
+
+	position: absolute;
+
+	transition-property: height, background-color, border-color;
+	transition-duration: 0.25s;
+}
+.Expander:hover
+{
+	background-color: #1a1a1a;
+
+	background-image: resource("Textures/Icons/Arrow1 - Down");
+	background-size: 60%;
+}
+.Expander__HoverOnTitle
+{
+	background-color: #1f1f1f;
+	border-width: 1px;
+	border-color: #5f5f5f;
+	border-left-color: #404040;
+
+	height: 40px;
+}
+.Expander__OnExpand
+{
+	background-image: resource("Textures/Icons/Arrow2 - Up");
+}
+.Expander__OnExpand:hover
+{
+	background-color: #1a1a1a;
+
+	background-image: resource("Textures/Icons/Arrow1 - Up");
+	background-size: 60%;
+}
+.Expander__HoverOnTitle__OnExpand
+{
+	background-color: #1f1f1f;
+	border-width: 1px;
+	border-bottom-color: #5f5f5f;
+	border-left-color: #404040;
+
+	height: 40px;
+}
+
+
+.TitleBackground
+{
+	background-color: #252525;
+	border-width: 1px;
+	border-color: transparent;
+
+	width: 100%;
+	height: 20px;
+
+	margin-right: 20px;
+	margin-left: 20px;
+
+	border-radius: 0px;
+
+	flex-direction: row;
+
+	position: absolute;
+
+	transition-property: height, background-color, border-color;
+	transition-duration: 0.25s;
+}
+.TitleBackground__HoverOnTitle__OnExpand
+{
+	background-color: #1a1a1a;
+	border-bottom-color: #5f5f5f;
+
+	height: 40px;
+}
+.TitleBackground__HoverOnTitle
+{
+	background-color: #1a1a1a;
+	border-color: #5f5f5f;
+
+	height: 40px;
+}
+
+
+.TagIcon
+{
+	background-color: transparent;
+
+	width: 15px;
+	height: 15px;
+
+	-unity-background-image-tint-color: #ffffff;
+
+	margin-left: 5px;
+
+	align-self: center;
+
+	position: absolute;
+
+	transition-property: width, height, margin-left, -unity-background-image-tint-color, background-image;
+	transition-duration: 0.25s;
+}
+.TagIcon__HoverOnTitle
+{
+	/*background-color: #4f4f4f;*/
+
+	-unity-background-image-tint-color: #ffffff;
+
+	width: 30px;
+	height: 30px;
+
+	margin-left: 3.75px;
+}
+
+
+.Title
+{
+	background-color: transparent;
+
+	-unity-font-definition: var(--font-nightmare-pills);
+	-unity-font-style: bold;
+	color: #ffffff;
+	font-size: 13px;
+
+	margin-top: -2.5px;
+	margin-left: 25px;
+
+	position: absolute;
+
+	transition-property: font-size, margin-left, margin-top;
+	transition-duration: 0.25s;
+}
+.Title__HoverOnTitle
+{
+	margin-top: 7.5px;
+	margin-left: 45px;
+
+	font-size: 14px;
+}
+
+
+.ClipPanel
+{
+	background-color: transparent;
+
+	position: relative;
+
+	margin-left: 0px;
+	margin: 5px;
+	margin-top: -5px;
+
+	justify-content: center;
+
+	transition-property: margin-top;
+	transition-duration: 0.25s;
+}
+.ClipPanel__HoverOnTitle
+{
+	margin-top: -5px;
+}
+.ClipPanel__OnExpand
+{
+	margin-top: 5px;
+}
+.ClipPanel__HoverOnTitle__OnExpand
+{
+	margin-top: 5px;
+}
+
+
+.Board
+{
+	background-color: transparent;
+	color: #fda4ba;
+
+	width: 75%;
+	height: 30px;
+	
+	-unity-font-definition: var(--font-nightmare-pills);
+	font-size: 20px;
+	-unity-font-style: bold;
+
+	align-self: center;
+}
+
+
+.LabelField > .unity-label
+{
+	background-color: transparent;
+
+	height: 20px;
+
+	align-self: flex-start;
+	justify-content: flex-start;
+
+	-unity-text-align: middle-left;
+}
+
+.BaseField > .unity-base-text-field__input
+{
+	background-color: #252525;
+	border-width: 1px;
+	border-color: #585858;
+	border-radius: 0px;
+}
+.BaseField:hover > .unity-base-text-field__input
+{
+	border-color: #AAAAAA;
+}
+.BaseField:focus > .unity-base-text-field__input
+{
+	border-color: #52A3A2;
+}
+
+.BaseField > .unity-enum-field__input
+{
+	background-color: #505050;
+	border-width: 1px;
+	border-color: #757575;
+	border-radius: 0px;
+}
+.BaseField:hover > .unity-enum-field__input
+{
+	border-color: #BBBBBB;
+}
+.BaseField:focus > .unity-enum-field__input
+{
+	border-color: #52A3A2;
+}
+
+
+
+
+.TransitionBackground
+{
+	background-color: #2c2c2c;
+	margin-top: 20px;
+
+	padding: 5px;
+
+	transition-property: margin-top;
+	transition-duration: 0.25s;
+}
+.TransitionBackground__HoverOnTitle
+{
+	margin-top: 40px;
+}
+
+.TransitionLabel
+{
+	-unity-text-align: middle-left;
+
+	margin: 0px;
+	margin-left: 3px;
+	margin-right: 5px;
+
+	margin-top: 1.5px;
+}
+.TransitionField > .unity-enum-field__input
+{
+	background-color: #1f1f1f;
+	border-width: 1px;
+	border-color: #3a3a3a;
+	border-radius: 0px;
+
+	height: 20px;
+}

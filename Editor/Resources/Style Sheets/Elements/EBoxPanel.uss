@@ -1,0 +1,88 @@
+.Main
+{
+	background-color: transparent;
+	border-color: transparent;
+
+	width: 50%;
+
+	margin: 0px;
+	margin-left: 1px;
+
+	flex-grow: 1px;
+}
+.MainRight
+{
+	padding-right: 2.5px;
+}
+.MainLeft
+{
+	padding-left: 2.5px;
+}
+
+.Scroll
+{
+	background-color: #353535;
+	border-width: 0px;
+	border-radius: 0px;
+
+	width: 100%;
+
+	margin-bottom: 2.5px;
+
+	padding: 5px;
+
+	flex-grow: 1;
+}
+
+.Title
+{
+	background-color: #1f1f1f;
+
+	border-radius: 0px;
+
+	height: 25px;
+
+	margin-top: 2.5px;
+
+	-unity-font-definition: var(--font-nightmare-pills);
+	-unity-font-style: bold;
+	font-size: 15px;
+}
+
+.Background
+{
+	background-color: #353535;
+
+	height: 100%;
+
+	padding: 5px;
+
+	flex-frow: 1;
+}
+
+.AddBox
+{
+	background-color: #5f5f5f;
+	border-radius: 0px;
+	border-width: 1px;
+	border-color: transparent;
+
+	height: 20px;
+
+	margin: 1px;
+	margin-top: 5px;
+
+	-unity-font-definition: var(--font-nightmare-pills);
+	-unity-font-style: bold;
+	font-size: 13px;
+	color: #ffffff;
+
+	transition-property: font-size, background-color;
+	transition-duration: 0.25s;
+}
+.AddBox:hover
+{
+	background-color: #6f6f6f;
+	border-color: #a5a5a5;
+	font-size: 15px;
+}

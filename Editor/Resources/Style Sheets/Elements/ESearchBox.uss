@@ -1,0 +1,70 @@
+.MainA
+{
+	background-color: transparent;
+	
+	width: auto;
+	height: 25px;
+
+	margin: 1px;
+}
+
+.Background
+{
+	background-color: #1F1F1F;
+
+	border-width: 1px;
+	border-color: #4A4A4A;
+	border-radius: 0px;
+
+	width: auto;
+
+	margin-left: 5px;
+	margin-right: 5px;
+
+	flex-direction: row;
+
+	transition-property: height, background-color, border-color;
+	transition-duration: 0.25s;
+}
+.Background:hover
+{
+	background-color: #151515;
+	border-color: #7f7f7f;
+}
+
+.TagIcon
+{
+	background-color: transparent;
+
+	width: 15px;
+	height: 15px;
+
+	-unity-background-image-tint-color: #ffffff;
+
+	margin-left: 5px;
+
+	align-self: center;
+
+	position: absolute;
+
+	transition-property: width, height, margin-left, -unity-background-image-tint-color, background-image;
+	transition-duration: 0.25s;
+}
+
+.Title
+{
+	background-color: transparent;
+
+	-unity-font-definition: var(--font-nightmare-pills);
+	-unity-font-style: bold;
+	color: #ffffff;
+	font-size: 13px;
+
+	margin-top: 6.25px;
+	margin-left: 27.5px;
+
+	position: absolute;
+
+	transition-property: font-size, margin-left, margin-top;
+	transition-duration: 0.25s;
+}
