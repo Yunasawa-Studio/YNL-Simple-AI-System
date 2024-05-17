@@ -22,8 +22,9 @@ Contact us: <kbd> yunasawa200@gmail.com </kbd>
 <ul>
 <li><a href="#installation"> ★ Installation </a></li>
 </ul>
-<h2><div id="installation"> ★ Installation </div></h2>
 
+<details>
+<summary><h2><div id="installation"> ★ Installation </div></h2></summary>
 <h3><i>Install from Git URL</i></h3>
 Git URL:
 
@@ -49,3 +50,5 @@ After you register the scope, you can add the package by name:
 ```
 com.yunasawa.yne.simpleaisystem
 ```
+
+</details>
