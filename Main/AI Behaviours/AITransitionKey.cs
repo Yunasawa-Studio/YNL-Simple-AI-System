@@ -25,7 +25,7 @@ namespace YNL.SimpleAISystem
             False = "";
             Properties.Clear();
 
-            Type type = Type.GetType($"YNL.RPG.AI.AIDecision{label}");
+            Type type = Type.GetType($"YNL.SimpleAISystem.AIDecision{label}");
             if (type.IsNull()) return;
 
             object instance = Activator.CreateInstance(type);

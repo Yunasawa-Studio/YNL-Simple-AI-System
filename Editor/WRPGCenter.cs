@@ -27,11 +27,11 @@ namespace YNL.SimpleAISystem.Editors
         #endregion
 
 
-        [MenuItem("🔗 YのL/🔗 Windows/🔗 Editor RPG Center")]
+        [MenuItem("🔗 YのL/🔗 Windows/🔗 Extensions Editor Center")]
         public static void ShowWindow()
         {
-            WRPGCenter window = GetWindow<WRPGCenter>("Editor RPG Center");
-            Texture2D texture = AssetDatabase.LoadAssetAtPath<Texture2D>(WindowIconPath);
+            WRPGCenter window = GetWindow<WRPGCenter>("Extensions Editor Center");
+            Texture2D texture = WindowIconPath.LoadResource<Texture2D>();
 
             window.titleContent.image = texture;
             window.maxSize = new Vector2(800, 500);
@@ -52,7 +52,7 @@ namespace YNL.SimpleAISystem.Editors
 
             Texture2D waitIcon = "Textures/Icons/Time1".LoadResource<Texture2D>();
 
-            WindowTagPanel = new(windowIcon, "RPG Editor", "Editor Center", _tagPanelWidth, new EWindowTag[]
+            WindowTagPanel = new(windowIcon, "Extensions", "Editor Center", _tagPanelWidth, new EWindowTag[]
             {
                 new EWindowTag(aiBehaviourIcon, "AI Behaviour Editor", "RPG", Color.white, _tagPanelWidth - 15, () => SwitchWindow(WRPGWindowTag.AIBehaviour)),
                 new EWindowTag(waitIcon, "Coming Soon", "", Color.white, _tagPanelWidth - 15, () => SwitchWindow(WRPGWindowTag.B)),

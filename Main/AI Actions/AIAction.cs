@@ -1,4 +1,3 @@
-using YNL.Extensions.Methods;
 using YNL.Utilities.Addons;
 
 namespace YNL.SimpleAISystem
@@ -7,8 +6,6 @@ namespace YNL.SimpleAISystem
     {
         protected AIController _controller;
         public bool InProgress { get; set; }
-
-        public int Hello;
 
         public AIAction(AIController controller)
         {

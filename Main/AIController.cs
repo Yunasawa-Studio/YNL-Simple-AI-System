@@ -10,8 +10,8 @@ namespace YNL.SimpleAISystem
     public class AIController : MonoBehaviour
     {
         #region ▶ Extension Properties
-        public Animator Animator;
-        public AIRoot Root;
+        [HideInInspector] public Animator Animator;
+        [HideInInspector] public AIRoot Root;
         #endregion
 
         #region ▶ AI Properties

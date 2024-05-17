@@ -125,7 +125,7 @@ namespace YNL.SimpleAISystem.Editors
         }
         public void AddProperties()
         {
-            Type type = Type.GetType($"YNL.RPG.AI.AIDecision{_key.Label}");
+            Type type = Type.GetType($"YNL.SimpleAISystem.AIDecision{_key.Label}");
             if (type.IsNull()) return;
 
             FieldInfo[] fields = type.GetFieldsInSubclass();

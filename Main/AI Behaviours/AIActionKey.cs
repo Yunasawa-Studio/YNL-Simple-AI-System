@@ -21,7 +21,7 @@ namespace YNL.SimpleAISystem
             Label = label;
             Properties.Clear();
 
-            Type type = Type.GetType($"YNL.RPG.AI.AIAction{label}");
+            Type type = Type.GetType($"YNL.SimpleAISystem.AIAction{label}");
             if (type.IsNull()) return;
 
             object instance = Activator.CreateInstance(type);

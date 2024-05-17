@@ -64,14 +64,14 @@ namespace YNL.SimpleAISystem.Editors
             {
                 foreach (var type in MType.GetInheritedTypes<AIAction>())
                 {
-                    _labelList.Add(type.ToString().RemoveWord("YNL.RPG.AI.AIAction"));
+                    _labelList.Add(type.ToString().RemoveWord("YNL.SimpleAISystem.AIAction"));
                 }
             }
             else
             {
                 foreach (var type in MType.GetInheritedTypes<AIDecision>())
                 {
-                    _labelList.Add(type.ToString().RemoveWord("YNL.RPG.AI.AIDecision"));
+                    _labelList.Add(type.ToString().RemoveWord("YNL.SimpleAISystem.AIDecision"));
                 }
             }
         }

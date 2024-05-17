@@ -62,12 +62,22 @@ namespace YNL.SimpleAISystem.Editors
             if (_isAction)
             {
                 AIActionKey key = new("...");
+                if (_main.Handler.CurrentStateKey.IsNull())
+                {
+                    MDebug.Caution("Please create or select one <b>State</b> before adding any <b>Action</b>");
+                    return;
+                }
                 _main.Handler.CurrentStateKey.Actions.Add(key);
                 AddBoxes(new EActionBox(key, _main));
             }
             else
             {
                 AITransitionKey key = new("...");
+                if (_main.Handler.CurrentStateKey.IsNull())
+                {
+                    MDebug.Caution("Please create or select one <b>State</b> before adding any <b>Transition</b>");
+                    return;
+                }
                 _main.Handler.CurrentStateKey.Transitions.Add(key);
                 AddBoxes(new ETransitionBox(key, _main.Handler.Behaviour.StateKeys, _main));
             }
