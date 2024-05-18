@@ -1,4 +1,4 @@
-<adetails>
+<details>
 <summary><h2><div id="part1"> ★ How to set up your AI objects </div></h2></summary>
 
 <ul>
@@ -8,5 +8,5 @@
   <li> Everything is done, if you have not done an Action to get a target; make sure to put an object inside the <code>Target</code> field or it will throw an error. </li>
 </ul>
 
-</adetails>
+</details>
 
