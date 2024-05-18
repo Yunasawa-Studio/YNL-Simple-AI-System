@@ -1,4 +1,6 @@
 #if UNITY_EDITOR
+#if YNL_EDITOR
+#if YNL_UTILITIES
 using System;
 using System.Reflection;
 using UnityEngine;
@@ -136,4 +138,6 @@ namespace YNL.SimpleAISystem.Editors
         }
     }
 }
+#endif
+#endif
 #endif

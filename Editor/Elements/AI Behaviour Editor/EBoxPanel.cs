@@ -1,4 +1,6 @@
 #if UNITY_EDITOR
+#if YNL_EDITOR
+#if YNL_UTILITIES
 using UnityEngine.UIElements;
 using YNL.Editors.Windows.Utilities;
 using YNL.Editors.Windows;
@@ -84,4 +86,6 @@ namespace YNL.SimpleAISystem.Editors
         }
     }
 }
+#endif
+#endif
 #endif

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿#if YNL_UTILITIES
+using System.Linq;
 using Unity.Collections;
 using UnityEngine;
 using YNL.Attributes;
@@ -135,3 +136,4 @@ namespace YNL.SimpleAISystem
         #endregion
     }
 }
+#endif

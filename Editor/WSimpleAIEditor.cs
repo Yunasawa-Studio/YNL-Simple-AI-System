@@ -1,4 +1,6 @@
 ﻿#if UNITY_EDITOR
+#if YNL_EDITOR
+#if YNL_UTILITIES
 using UnityEditor;
 using UnityEngine;
 using YNL.Editors.UIElements;
@@ -97,4 +99,6 @@ namespace YNL.SimpleAISystem.Editors
         AIBehaviour, AIIcon, C, D, E, F
     }
 }
+#endif
+#endif
 #endif

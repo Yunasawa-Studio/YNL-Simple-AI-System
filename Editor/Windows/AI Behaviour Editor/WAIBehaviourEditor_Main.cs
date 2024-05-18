@@ -1,4 +1,6 @@
 #if UNITY_EDITOR
+#if YNL_EDITOR
+#if YNL_UTILITIES
 using System;
 using UnityEditor;
 using UnityEngine;
@@ -45,4 +47,6 @@ namespace YNL.SimpleAISystem.Editors
         public static Action<AIStateKey> RemoveState;
     }
 }
+#endif
+#endif
 #endif

@@ -1,4 +1,6 @@
 ﻿#if UNITY_EDITOR
+#if YNL_EDITOR
+#if YNL_UTILITIES
 using UnityEngine;
 using UnityEngine.UIElements;
 using YNL.Editors.UIElements;
@@ -109,4 +111,6 @@ namespace YNL.SimpleAISystem.Editors
         public void AddTransitionBoxes(params ETransitionBox[] boxes) => TransitionPanel.AddBoxes(boxes);
     }
 }
+#endif
+#endif
 #endif

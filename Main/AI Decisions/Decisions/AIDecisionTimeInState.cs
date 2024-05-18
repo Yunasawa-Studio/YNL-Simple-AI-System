@@ -1,3 +1,4 @@
+#if YNL_UTILITIES
 using System.Collections;
 using UnityEngine;
 using YNL.Extensions.Methods;
@@ -55,3 +56,4 @@ namespace YNL.SimpleAISystem
         }
     }
 }
+#endif

@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
+﻿#if YNL_UTILITIES
+using System.Collections.Generic;
 using YNL.Extensions.Methods;
-
 using YNL.Utilities.Addons;
-
 #if UNITY_EDITOR
 using UnityEditor.Callbacks;
 using UnityEditor;
@@ -97,3 +96,4 @@ namespace YNL.SimpleAISystem
         #endregion
     }
 }
+#endif

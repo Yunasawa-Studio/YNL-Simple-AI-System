@@ -1,4 +1,6 @@
 #if UNITY_EDITOR
+#if YNL_EDITOR
+#if YNL_UTILITIES
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor.UIElements;
@@ -104,6 +106,6 @@ namespace YNL.SimpleAISystem.Editors
         }
     }
 }
-
-
+#endif
+#endif
 #endif
