@@ -57,7 +57,6 @@ com.yunasawa.ynl.simpleaisystem
 
 <details>
 <summary><h2><div id="part1"> ★ How to use AI Behaviour Editor </div></h2></summary>
-
 <ul>
   <li> Create <b> AI Behaviour </b> in your Project window like this and name it as you want. </li>
   <br>
