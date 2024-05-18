@@ -190,6 +190,20 @@ namespace YNL.SimpleAISystem
 
 </details>
 
+<details>
+<summary><h2><div id="part1"> ★ Cách thiết lập đối tượng AI của bạn </div></h2></summary>
+
+<ul>
+  <li> Bạn có thể mở Scene mẫu để hình dung rõ hơn về những gì bạn cần. Vào bên trong <code>Packages/YのL - Simple AI System/Sample/Sample Scene</code>; hiện tại bạn không thể mở scene vì bạn không có quyền mở read-only scene từ một package. Nhưng đừng lo lắng, tất cả những gì bạn cần làm chỉ là sao chép scene và dán nó vào nơi bạn muốn; sau đó bây giờ bạn có thể mở nó </li>
+  <li> Hãy nhìn vào đối tượng <code>AI Root</code>, nó chứa thành phần <code>AI Root (Script)</code>, khi đó nó sẽ là thành phần bạn cần thêm vào đối tượng AI. Nếu nó có animations, hãy thêm cả <code>Animator</code> nữa. </li>
+  <li> Nhìn vào đối tượng con <code>AI Controller</code>, đây là Controller của hệ thống AI. Thêm thành phần này và thả <code>AI Behaviour</code> mà bạn muốn sử dụng vào bên trong. (<code>AIController</code> phải nằm trong đối tượng con của <code>AIRoot</code>) </li>
+ <li> Mọi thứ đã xong, nếu bạn chưa thực hiện Action để lấy được Target; hãy đảm bảo đặt một đối tượng vào trong trường <code>Target</code> nếu không nó sẽ báo lỗi. </li>
+</ul>
+
+</details>
+
+
+
 </details>
 
 
