@@ -16,6 +16,14 @@
     <li> <code>void OnEnterState()</code>: This will be called when entering the state. </li>
     <li> <code>void OnExitState()</code>: This will be called when exiting the state. </li>
   </ul>
+  <li> Come to AIDecision, there are also 5 methods that you can override. </li>
+  <ul>
+    <li> <code>void Initialize(AIController controller)</code>: Here you can initialize everything you need, such as getting the components, ect. </li>
+    <li> <code>void Convert(SerializableDictionary<string, string> properties)</code>: Here you can convert the keys and values into the types you want. Keys are the name of properties and values are the values of the properties. You can see the sample below to make it easier to imagine.</li>
+    <li> <code>bool DoDecision()</code>: Here you decide when to move to next state by returning this method a boolean. </li>
+    <li> <code>void OnEnterState()</code>: This will be called when entering the state. </li>
+    <li> <code>void OnExitState()</code>: This will be called when exiting the state. </li>
+  </ul>
 </ul>
 
 </adetails>
