@@ -1,3 +1,4 @@
+#if YNL_UTILITIES
 using System.Collections.Generic;
 
 namespace YNL.SimpleAISystem
@@ -15,3 +16,4 @@ namespace YNL.SimpleAISystem
         }
     }
 }
+#endif

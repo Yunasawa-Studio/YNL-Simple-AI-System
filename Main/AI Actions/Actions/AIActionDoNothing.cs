@@ -1,3 +1,4 @@
+#if YNL_UTILITIES
 namespace YNL.SimpleAISystem
 {
     public class AIActionDoNothing : AIAction
@@ -6,3 +7,4 @@ namespace YNL.SimpleAISystem
         public AIActionDoNothing(AIController controller) : base(controller) { }
     }
 }
+#endif

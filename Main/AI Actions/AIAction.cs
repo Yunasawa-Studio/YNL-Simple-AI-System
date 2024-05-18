@@ -1,3 +1,4 @@
+#if YNL_UTILITIES
 using YNL.Utilities.Addons;
 
 namespace YNL.SimpleAISystem
@@ -35,3 +36,4 @@ namespace YNL.SimpleAISystem
         }
     }
 }
+#endif
