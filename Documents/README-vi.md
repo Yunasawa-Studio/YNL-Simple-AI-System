@@ -1,4 +1,4 @@
-<div align="center"><h1><i> YのL - Simple AI System (Instuction - EN) </i></h1></div>
+<div align="center"><h1><i> YのL - Simple AI System (Instuction - Vi) </i></h1></div>
 
 <details>
 <summary><h2><div id="part1"> ★ Cách sử dụng AI Behaviour Editor </div></h2></summary>
