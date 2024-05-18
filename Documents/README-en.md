@@ -22,7 +22,7 @@
   <br>
   <img align="right" width=300px src="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/assets/113672166/622c862f-4b97-435a-bfba-ede0ff086880">
   <li> After creating all the states you want, choose one and one the main side, press on <code>Add</code> button on ACTION window and TRANSITION window. </li>
-  <li> You can click on the box to open a selecting window, with Action box, you can choose the actions that you want, and with Decision box, you can choose the decisions for the states. </li>
+  <li> You can click on the box to open a selecting window, with Action box, you can choose the actions that you want, and with Decision box, you can choose the decisions for the next states. </li>
   <li> The window looks like this: </li>
   <br>
   <br>
@@ -35,7 +35,7 @@
   </tr>
   </table>
   <img align="right" width=300px src="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/assets/113672166/41e4cc63-249a-472a-a449-6b63edad1e6c">
-  <li> After you finish editting everything, select the AI Behaviour asset, choose <code>Save Data</code> to save all your changes, otherwise, you will regret not did that. </li>
+  <li> After you finish editing everything, select the AI Behaviour asset, choose <code>Save Data</code> to save all your changes, otherwise, you will regret not did that. </li>
 </ul>
 
 </details>
