@@ -5,6 +5,7 @@ using YNL.Utilities.Addons;
 #if UNITY_EDITOR
 using UnityEditor.Callbacks;
 using UnityEditor;
+using YNL.SimpleAISystem.Editors;
 #endif
 using UnityEngine;
 
@@ -23,7 +24,7 @@ namespace YNL.SimpleAISystem
             AIBehaviour asset = EditorUtility.InstanceIDToObject(instanceID) as AIBehaviour;
             if (asset != null)
             {
-                //WAIBehaviourEditor_Main.ShowWindow(asset);
+                WAIBehaviourEditor_Main.ShowWindow(asset);
                 return true;
             }
             return false;
