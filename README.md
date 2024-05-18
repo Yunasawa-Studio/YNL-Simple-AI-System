@@ -25,6 +25,11 @@ Contact us: <kbd> yunasawa200@gmail.com </kbd>
 </ul>
 -->
 
+<ul>
+  <li><a href="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/blob/main/Documents/README-en.md">INSTRUCTION - English</a></li>
+  <li><a href="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/blob/main/Documents/README-vi.md">INSTRUCTION - Vietnamese</a></li>
+</ul>
+
 <details>
 <summary><h2><div id="installation"> ★ Installation </div></h2></summary>
 <h3><i>Install from Git URL</i></h3>
@@ -43,7 +48,7 @@ You can add UPM Scrope like this:
 ```
 Name: YunasawaStudio
 URL: https://package.openupm.com
-Scope(s): com.yunasawa.ynl
+Scope(s): com.yunasawa.ynl.simpleaisystem
 ```
 
 Here is how you can do it: <a href="https://openupm.com/docs/getting-started.html#installing-a-upm-package"> How to register a UPM scope(s) </a>
