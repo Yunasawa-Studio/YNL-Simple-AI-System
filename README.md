@@ -26,8 +26,8 @@ Contact us: <kbd> yunasawa200@gmail.com </kbd>
 -->
 
 <ul>
-  <li><a href="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/blob/main/Documents/README-en.md">DOCUMENT - English</a></li>
-  <li><a href="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/blob/main/Documents/README-vi.md">DOCUMENT - Vietnamese</a></li>
+  <li><a href="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/blob/main/Documents/README-en.md">INSTRUCTION - English</a></li>
+  <li><a href="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/blob/main/Documents/README-vi.md">INSTRUCTION - Vietnamese</a></li>
 </ul>
 
 <details>
