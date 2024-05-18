@@ -7,7 +7,9 @@
     <li> Whenever you create a new Action or Decision, make sure to put it inside namespace <code>YNL.SimpleAISystem</code>. </li>
     <li> Every created Action should have <code>AIAction</code> as a prefix, and every created Decision should have <code>AIDecision</code> as a prefix too. </li>
   </ul>
+  <br>
   <li> Now come to the main part; after you follow the notes above and created a new Action or Decision, you need to create 2 constructors, one have no parameter and one have <code>AIController</code> as the only parameter. </li>
+  <br>
   <li> Now is your part, inside AIAction, there are 5 methods that you can override. </li>
   <ul>
     <li> <code>void Initialize(AIController controller)</code>: Here you can initialize everything you need, such as getting the components, ect. </li>
@@ -16,6 +18,7 @@
     <li> <code>void OnEnterState()</code>: This will be called when entering the state. </li>
     <li> <code>void OnExitState()</code>: This will be called when exiting the state. </li>
   </ul>
+  <br>
   <li> Come to AIDecision, there are also 5 methods that you can override. </li>
   <ul>
     <li> <code>void Initialize(AIController controller)</code>: Here you can initialize everything you need, such as getting the components, ect. </li>
@@ -25,6 +28,101 @@
     <li> <code>void OnExitState()</code>: This will be called when exiting the state. </li>
   </ul>
 </ul>
+
+```csharp
+using UnityEngine;
+using YNL.Extensions.Methods;
+using YNL.Utilities.Addons;
+
+namespace YNL.SimpleAISystem
+{
+    public class AIActionSample : AIAction
+    {
+        public AIActionSample() : base(null) { }
+        public AIActionSample(AIController controller) : base(controller) { }
+
+        private Rigidbody _rigidbody;
+        public int Distance;
+        public KeyCode KeyCode;
+
+        public override void Initialize(AIController controller)
+        {
+            base.Initialize(controller);
+
+            _rigidbody = controller.Root.GetComponent<Rigidbody>();
+        }
+
+        public override void Convert(SerializableDictionary<string, string> properties)
+        {
+            Distance = int.Parse(properties["Distance"]);
+            KeyCode = MEnum.Parse<KeyCode>(properties["KeyCode"]);
+        }
+
+        public override void DoAction()
+        {
+            // Perform the actions
+        }
+
+        public override void OnEnterState()
+        {
+            // Do something when entering the state
+        }
+
+        public override void OnExitState()
+        {
+            // Do something when exiting the state
+        }
+    }
+}
+```
+
+```csharp
+using UnityEngine;
+using YNL.Extensions.Methods;
+using YNL.Utilities.Addons;
+
+namespace YNL.SimpleAISystem
+{
+    public class AIDecisionSample : AIDecision
+    {
+        public AIDecisionSample() : base(null) { }
+        public AIDecisionSample(AIController controller) : base(controller) { }
+
+        private Rigidbody _rigidbody;
+        public int Distance;
+        public KeyCode KeyCode;
+
+        public override void Initialize(AIController controller)
+        {
+            base.Initialize(controller);
+
+            _rigidbody = controller.Root.GetComponent<Rigidbody>();
+        }
+
+        public override void Convert(SerializableDictionary<string, string> properties)
+        {
+            Distance = int.Parse(properties["Distance"]);
+            KeyCode = MEnum.Parse<KeyCode>(properties["KeyCode"]);
+        }
+
+        public override bool DoDecision()
+        {
+            // Decise the transition
+            return true;
+        }
+
+        public override void OnEnterState()
+        {
+            // Do something when entering the state
+        }
+
+        public override void OnExitState()
+        {
+            // Do something when exiting the state
+        }
+    }
+}
+```
 
 </adetails>
 
