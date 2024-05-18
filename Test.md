@@ -30,7 +30,7 @@
 </ul>
 
 <details>
-<summary> AIActionSample.cs </summary>
+<summary> AIActionSample.cs (Sample for custom AIAction script) </summary>
 
 ```csharp
 using UnityEngine;
@@ -44,7 +44,11 @@ namespace YNL.SimpleAISystem
         public AIActionSample() : base(null) { }
         public AIActionSample(AIController controller) : base(controller) { }
 
+        // Make the properties you want to hide as private; the Editor is currently not support
+        // Reference properties so you can only get it from Initialize() method
         private Rigidbody _rigidbody;
+
+        // Make the properties you want to edit inside Editor as public 
         public int Distance;
         public KeyCode KeyCode;
 
@@ -57,7 +61,10 @@ namespace YNL.SimpleAISystem
 
         public override void Convert(SerializableDictionary<string, string> properties)
         {
+            // Use converting method to convert string into the types you want.
             Distance = int.Parse(properties["Distance"]);
+
+            // For enum you can use MEnum.Parse<T>(string) as below
             KeyCode = MEnum.Parse<KeyCode>(properties["KeyCode"]);
         }
 
@@ -82,7 +89,7 @@ namespace YNL.SimpleAISystem
 </details>
 
 <details>
-<summary> AIDecisionSample.cs </summary>
+<summary> AIDecisionSample.cs (Sample for custom AIAction script) </summary>
 
 ```csharp
 using UnityEngine;
@@ -96,7 +103,11 @@ namespace YNL.SimpleAISystem
         public AIDecisionSample() : base(null) { }
         public AIDecisionSample(AIController controller) : base(controller) { }
 
+        // Make the properties you want to hide as private; the Editor is currently not support
+        // Reference properties so you can only get it from Initialize() method
         private Rigidbody _rigidbody;
+
+        // Make the properties you want to edit inside Editor as public
         public int Distance;
         public KeyCode KeyCode;
 
@@ -109,7 +120,10 @@ namespace YNL.SimpleAISystem
 
         public override void Convert(SerializableDictionary<string, string> properties)
         {
+            // Use converting method to convert string into the types you want.
             Distance = int.Parse(properties["Distance"]);
+
+            // For enum you can use MEnum.Parse<T>(string) as below
             KeyCode = MEnum.Parse<KeyCode>(properties["KeyCode"]);
         }
 
