@@ -43,7 +43,7 @@ You can add UPM Scrope like this:
 ```
 Name: YunasawaStudio
 URL: https://package.openupm.com
-Scope(s): com.yunasawa.ynl
+Scope(s): com.yunasawa.ynl.simpleaisystem
 ```
 
 Here is how you can do it: <a href="https://openupm.com/docs/getting-started.html#installing-a-upm-package"> How to register a UPM scope(s) </a>
