@@ -25,6 +25,11 @@ Contact us: <kbd> yunasawa200@gmail.com </kbd>
 </ul>
 -->
 
+<ul>
+  <li><a href="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/blob/main/Documents/README-en.md">DOCUMENT - English</a></li>
+  <li><a href="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/blob/main/Documents/README-vi.md">DOCUMENT - Vietnamese</a></li>
+</ul>
+
 <details>
 <summary><h2><div id="installation"> ★ Installation </div></h2></summary>
 <h3><i>Install from Git URL</i></h3>
@@ -54,7 +59,3 @@ com.yunasawa.ynl.simpleaisystem
 ```
 
 </details>
-
-<ul>
-  <li><a href="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/blob/main/Documents/README-vi.md">DOCUMENT - Vietnamese</a></li>
-</ul>
