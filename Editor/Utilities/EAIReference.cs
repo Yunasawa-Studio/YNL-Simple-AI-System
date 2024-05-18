@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace YNL.SimpleAISystem
 {
-    [CreateAssetMenu(fileName = "AI Reference", menuName = "🔗 YのL/💫 Simple AI System/🚧 AI: Reference")]
+    [CreateAssetMenu(fileName = "AI Reference", menuName = "🔗 YのL/💫 Simple AI System/🚧 AI: Reference (Editor)")]
 
     public class EAIReference : ScriptableObject
     {

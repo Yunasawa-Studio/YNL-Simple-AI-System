@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009880947e3b1e147b5099775ba180dc, type: 3}
+  m_Name: AI Icon
+  m_EditorClassIdentifier: 
+  StateIcons:
+  - Label: Idle
+    Icon: {fileID: 2800000, guid: 6be652e2b077dec4c84b7074327d8ff6, type: 3}
+  - Label: Walk
+    Icon: {fileID: 2800000, guid: 4cc9ff414dd7ac8459d243f0f1551f1e, type: 3}
+  ActionIcons:
+  - Label: DoNothing
+    Icon: {fileID: 2800000, guid: a1bf5c4084ef8fc44b22a4db39ce4cfa, type: 3}
+  DecisionIcons:
+  - Label: TimeInState
+    Icon: {fileID: 2800000, guid: 96fe49490089d4147a0112af859271bf, type: 3}

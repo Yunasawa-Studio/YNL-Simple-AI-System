@@ -1,0 +1,17 @@
+.Main
+{
+	background-color: #353535;
+}
+
+.Wrapper
+{
+	background-color: transparent;
+	border-color: transparent;
+	background-image: resource("Textures/Editors/Dash Box");
+	-unity-background-image-tint-color: #B3B3B3;
+
+	width: 100%;
+	height: 50px;
+
+	margin: 0px;
+}
