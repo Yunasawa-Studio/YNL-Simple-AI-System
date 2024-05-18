@@ -29,6 +29,9 @@
   </ul>
 </ul>
 
+<details>
+<summary> AIActionSample.cs </summary>
+
 ```csharp
 using UnityEngine;
 using YNL.Extensions.Methods;
@@ -75,6 +78,11 @@ namespace YNL.SimpleAISystem
     }
 }
 ```
+
+</details>
+
+<details>
+<summary> AIDecisionSample.cs </summary>
 
 ```csharp
 using UnityEngine;
@@ -123,6 +131,8 @@ namespace YNL.SimpleAISystem
     }
 }
 ```
+
+</details>
 
 </adetails>
 
