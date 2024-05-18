@@ -39,3 +39,157 @@
 </ul>
 
 </details>
+
+<details>
+<summary><h2><div id="part1"> ★ Cách tạo script Action hoặc Decision tùy chỉnh </div></h2></summary>
+
+<ul>
+  <li> Đầu tiên, bạn cần chú ý một số điều quan trọng sau: </li>
+  <ul>
+  <li> Bất cứ khi nào bạn tạo Hành động hoặc Quyết định mới, hãy đảm bảo đặt nó trong không gian tên <code>YNL.SimpleAISystem</code>. </li>
+  <li> Mọi Action được tạo phải có <code>AIAction</code> làm tiền tố và mọi Decision được tạo cũng phải có <code>AIDecision</code> làm tiền tố. </li>
+ </ul>
+ <br>
+ <li> Bây giờ đến phần chính; sau khi làm theo các ghi chú ở trên và tạo Action hoặc Decision mới, bạn cần tạo 2 constructor, một không có tham số và một có <code>AIController</code> làm tham số duy nhất. </li>
+ <br>
+ <li> Bây giờ là phần của bạn, bên trong AIAction, có 5 phương thức mà bạn có thể override. </li>
+ <ul>
+    <li> <code>void Initialize(AIController controller)</code>: Tại đây bạn có thể khởi tạo bất cứ thứ gì bạn cần, ví dụ như GetComponent,... </li>
+    <li> <code>void Convert(SerializableDictionary<string, string> properties)</code>: Tại đây bạn có thể chuyển keys và values thành các type mà bạn cần. Keys là tên của properties và values là giá trị của các properties đó. Bạn có thể xem code mẫu bên dưới để dễ hình dung hơn.</li>
+    <li> <code>void DoAction()</code>: Thực thi hành động mà bạn muốn tại đây. </li>
+    <li> <code>void OnEnterState()</code>: Hàm này sẽ được gọi mỗi khi vào một state mới. </li>
+    <li> <code>void OnExitState()</code>: Hàm này sẽ được gọi mỗi khi thoát khỏi 1 state. </li>
+  </ul>
+  <br>
+  <li> Đến với AIDecision, ở đây cũng có 5 phương thức mà bạn có thể override. </li>
+  <ul>
+    <li> <code>void Initialize(AIController controller)</code>: Tại đây bạn có thể khởi tạo bất cứ thứ gì bạn cần, ví dụ như GetComponent,... </li>
+    <li> <code>void Convert(SerializableDictionary<string, string> properties)</code>: Tại đây bạn có thể chuyển keys và values thành các type mà bạn cần. Keys là tên của properties và values là giá trị của các properties đó. Bạn có thể xem code mẫu bên dưới để dễ hình dung hơn.</li>
+    <li> <code>bool DoDecision()</code>: Ở đây bạn quyết định điều kiện nào để chuyển sang state khác bằng cách trả về một boolean. </li>
+    <li> <code>void OnEnterState()</code>: Hàm này sẽ được gọi mỗi khi vào một state mới. </li>
+    <li> <code>void OnExitState()</code>: Hàm này sẽ được gọi mỗi khi thoát khỏi 1 state. </li>
+  </ul>
+</ul>
+
+<details>
+<summary> AIActionSample.cs (Sample for custom AIAction script) </summary>
+
+```csharp
+using UnityEngine;
+using YNL.Extensions.Methods;
+using YNL.Utilities.Addons;
+
+namespace YNL.SimpleAISystem
+{
+    public class AIActionSample : AIAction
+    {
+        public AIActionSample() : base(null) { }
+        public AIActionSample(AIController controller) : base(controller) { }
+
+        // Make the properties you want to hide as private; the Editor is currently not support
+        // Reference properties so you can only get it from Initialize() method
+        private Rigidbody _rigidbody;
+
+        // Make the properties you want to edit inside Editor as public 
+        public int Distance;
+        public KeyCode KeyCode;
+
+        public override void Initialize(AIController controller)
+        {
+            base.Initialize(controller);
+
+            _rigidbody = controller.Root.GetComponent<Rigidbody>();
+        }
+
+        public override void Convert(SerializableDictionary<string, string> properties)
+        {
+            // Use converting method to convert string into the types you want.
+            Distance = int.Parse(properties["Distance"]);
+
+            // For enum you can use MEnum.Parse<T>(string) as below
+            KeyCode = MEnum.Parse<KeyCode>(properties["KeyCode"]);
+        }
+
+        public override void DoAction()
+        {
+            // Perform the actions
+        }
+
+        public override void OnEnterState()
+        {
+            // Do something when entering the state
+        }
+
+        public override void OnExitState()
+        {
+            // Do something when exiting the state
+        }
+    }
+}
+```
+
+</details>
+
+<details>
+<summary> AIDecisionSample.cs (Sample for custom AIAction script) </summary>
+
+```csharp
+using UnityEngine;
+using YNL.Extensions.Methods;
+using YNL.Utilities.Addons;
+
+namespace YNL.SimpleAISystem
+{
+    public class AIDecisionSample : AIDecision
+    {
+        public AIDecisionSample() : base(null) { }
+        public AIDecisionSample(AIController controller) : base(controller) { }
+
+        // Make the properties you want to hide as private; the Editor is currently not support
+        // Reference properties so you can only get it from Initialize() method
+        private Rigidbody _rigidbody;
+
+        // Make the properties you want to edit inside Editor as public
+        public int Distance;
+        public KeyCode KeyCode;
+
+        public override void Initialize(AIController controller)
+        {
+            base.Initialize(controller);
+
+            _rigidbody = controller.Root.GetComponent<Rigidbody>();
+        }
+
+        public override void Convert(SerializableDictionary<string, string> properties)
+        {
+            // Use converting method to convert string into the types you want.
+            Distance = int.Parse(properties["Distance"]);
+
+            // For enum you can use MEnum.Parse<T>(string) as below
+            KeyCode = MEnum.Parse<KeyCode>(properties["KeyCode"]);
+        }
+
+        public override bool DoDecision()
+        {
+            // Decise the transition
+            return true;
+        }
+
+        public override void OnEnterState()
+        {
+            // Do something when entering the state
+        }
+
+        public override void OnExitState()
+        {
+            // Do something when exiting the state
+        }
+    }
+}
+```
+
+</details>
+
+</details>
+
+
