@@ -190,6 +190,8 @@ namespace YNL.SimpleAISystem
 
 </details>
 
+</details>
+
 <details>
 <summary><h2><div id="part1"> ★ Cách thiết lập đối tượng AI của bạn </div></h2></summary>
 
@@ -199,10 +201,6 @@ namespace YNL.SimpleAISystem
   <li> Nhìn vào đối tượng con <code>AI Controller</code>, đây là Controller của hệ thống AI. Thêm thành phần này và thả <code>AI Behaviour</code> mà bạn muốn sử dụng vào bên trong. (<code>AIController</code> phải nằm trong đối tượng con của <code>AIRoot</code>) </li>
  <li> Mọi thứ đã xong, nếu bạn chưa thực hiện Action để lấy được Target; hãy đảm bảo đặt một đối tượng vào trong trường <code>Target</code> nếu không nó sẽ báo lỗi. </li>
 </ul>
-
-</details>
-
-
 
 </details>
 
