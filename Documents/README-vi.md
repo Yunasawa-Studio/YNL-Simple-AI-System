@@ -86,11 +86,11 @@ namespace YNL.SimpleAISystem
         public AIActionSample() : base(null) { }
         public AIActionSample(AIController controller) : base(controller) { }
 
-        // Make the properties you want to hide as private; the Editor is currently not support
-        // Reference properties so you can only get it from Initialize() method
+        // Để thuộc tính mà bạn muốn ẩn thành private; Editor hiện tại chưa hỗ trợ
+        // các thuộc tính tham chiếu, hãy tham chiếu chúng thông qua hàm Initialize()
         private Rigidbody _rigidbody;
 
-        // Make the properties you want to edit inside Editor as public 
+        // Để thuộc tính mà bạn muốn hiện lên Editor thành public 
         public int Distance;
         public KeyCode KeyCode;
 
@@ -103,26 +103,26 @@ namespace YNL.SimpleAISystem
 
         public override void Convert(SerializableDictionary<string, string> properties)
         {
-            // Use converting method to convert string into the types you want.
+            // Sử dụng các hàm chuyển đổi để biến string thành kiểu mà bạn cần
             Distance = int.Parse(properties["Distance"]);
 
-            // For enum you can use MEnum.Parse<T>(string) as below
+            // Đối với enum bạn có thể dùng hàm MEnum.Parse<T>(string) như sau
             KeyCode = MEnum.Parse<KeyCode>(properties["KeyCode"]);
         }
 
         public override void DoAction()
         {
-            // Perform the actions
+            // Thực thi hành động
         }
 
         public override void OnEnterState()
         {
-            // Do something when entering the state
+            // Làm gì đó khi bắt đầu state
         }
 
         public override void OnExitState()
         {
-            // Do something when exiting the state
+            // Làm gì đó khi thoát khỏi state
         }
     }
 }
@@ -145,11 +145,11 @@ namespace YNL.SimpleAISystem
         public AIDecisionSample() : base(null) { }
         public AIDecisionSample(AIController controller) : base(controller) { }
 
-        // Make the properties you want to hide as private; the Editor is currently not support
-        // Reference properties so you can only get it from Initialize() method
+        // Để thuộc tính mà bạn muốn ẩn thành private; Editor hiện tại chưa hỗ trợ
+        // các thuộc tính tham chiếu, hãy tham chiếu chúng thông qua hàm Initialize()
         private Rigidbody _rigidbody;
 
-        // Make the properties you want to edit inside Editor as public
+        // Để thuộc tính mà bạn muốn hiện lên Editor thành public
         public int Distance;
         public KeyCode KeyCode;
 
@@ -162,27 +162,27 @@ namespace YNL.SimpleAISystem
 
         public override void Convert(SerializableDictionary<string, string> properties)
         {
-            // Use converting method to convert string into the types you want.
+            // Sử dụng các hàm chuyển đổi để biến string thành kiểu mà bạn cần
             Distance = int.Parse(properties["Distance"]);
 
-            // For enum you can use MEnum.Parse<T>(string) as below
+            // Đối với enum bạn có thể dùng hàm MEnum.Parse<T>(string) như sau
             KeyCode = MEnum.Parse<KeyCode>(properties["KeyCode"]);
         }
 
         public override bool DoDecision()
         {
-            // Decise the transition
+            // Quyết định quá trình chuyển đối của state
             return true;
         }
 
         public override void OnEnterState()
         {
-            // Do something when entering the state
+            // Làm gì đó khi bắt đầu state
         }
 
         public override void OnExitState()
         {
-            // Do something when exiting the state
+            // Làm gì đó khi thoát khỏi state
         }
     }
 }
