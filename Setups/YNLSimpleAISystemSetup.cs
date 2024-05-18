@@ -22,7 +22,7 @@ namespace YNL.SimpleAISystem.Editors
         public static void InitializeOnLoad()
         {
             EditorManifest.AddRegistry("YunasawaStudio", "https://package.openupm.com", "com.yunasawa.ynl.editor", "com.yunasawa.ynl.utilities");
-            EditorManifest.AddDependency("com.yunasawa.ynl.editor", "1.4.1");
+            EditorManifest.AddDependency("com.yunasawa.ynl.editor", "1.4.3");
             EditorManifest.AddDependency("com.yunasawa.ynl.utilities", "1.3.2");
             EditorDefineSymbols.AddSymbols("YNL_UTILITIES", "YNL_EDITOR");
         }
