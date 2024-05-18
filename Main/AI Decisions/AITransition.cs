@@ -1,3 +1,4 @@
+#if YNL_UTILITIES
 using UnityEngine;
 
 namespace YNL.SimpleAISystem
@@ -17,3 +18,4 @@ namespace YNL.SimpleAISystem
         }
     }
 }
+#endif
