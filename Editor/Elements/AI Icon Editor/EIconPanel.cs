@@ -3,7 +3,7 @@
 #if YNL_UTILITIES
 using UnityEngine;
 using UnityEngine.UIElements;
-using YNL.Editors.UIElements;
+using YNL.Editors.UIElements.Styled;
 using YNL.Editors.Windows.Utilities;
 
 namespace YNL.SimpleAISystem.Editors
@@ -13,14 +13,43 @@ namespace YNL.SimpleAISystem.Editors
         private const string _styleSheet = "Style Sheets/AI Icon Editor/Elements/EIconPanel";
 
         public EInteractableAssetsField<Texture2D> Wrapper;
+        public ScrollView Scroll;
+        public EIconBox Box;
 
         public EIconPanel()
         {
-            this.AddStyle(_styleSheet, EAddress.USSFont).AddClass("Main");
+            this.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
 
-            Wrapper = new EInteractableAssetsField<Texture2D>().AddClass("Wrapper");
+            //Wrapper = new EInteractableAssetsField<Texture2D>().AddClass("Wrapper");
+            //Wrapper.OnDragEnter += OnDragEnter;
+            //Wrapper.OnDragExit += OnDragExit;
+            //Wrapper.OnDragPerform += OnDragPerform;
 
-            this.AddElements(Wrapper);
+            Box = new EIconBox().AddClass("Box");
+
+            Scroll = new ScrollView().AddClass("Scroll");
+
+            for (int i = 0; i < 20; i++)
+            {
+                Scroll.AddElements(new EIconBox().AddClass("Box"));
+            }
+
+            this.AddElements(Scroll);
+        }
+
+        private void OnDragEnter()
+        {
+            Wrapper.EnableClass("WrapperEnter");
+        }
+
+        private void OnDragExit()
+        {
+            Wrapper.DisableClass("WrapperEnter");
+        }
+
+        private void OnDragPerform(Texture2D[] texture)
+        {
+            Wrapper.DisableClass("WrapperEnter");
         }
     }
 }

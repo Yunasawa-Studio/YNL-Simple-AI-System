@@ -4,7 +4,7 @@
 using System;
 using UnityEditor;
 using UnityEngine;
-using YNL.Editors.UIElements;
+using YNL.Editors.UIElements.Styled;
 using YNL.Editors.Windows;
 using YNL.Extensions.Methods;
 
@@ -38,6 +38,11 @@ namespace YNL.SimpleAISystem.Editors
 
             window.AIBehaviourEditor.Visual.ReferencedBehaviour.Background.AssignObject(behaviour);
             window.AIBehaviourEditor.Reference.AssignBehaviour(behaviour);
+        }
+
+        public void OnGUI()
+        {
+            Visual.OnGUI();
         }
     }
 

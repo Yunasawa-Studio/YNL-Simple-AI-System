@@ -3,7 +3,7 @@
 #if YNL_UTILITIES
 using UnityEditor;
 using UnityEngine;
-using YNL.Editors.UIElements;
+using YNL.Editors.UIElements.Styled;
 using YNL.Editors.Windows.Utilities;
 using YNL.Editors.Windows;
 using YNL.Extensions.Methods;
@@ -28,7 +28,6 @@ namespace YNL.SimpleAISystem.Editors
 
         private IMain _selectedWindow;
         #endregion
-
 
         [MenuItem("🔗 YのL/🔗 Windows/🔗 Simple AI Editor")]
         public static void ShowWindow()

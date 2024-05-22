@@ -25,7 +25,7 @@ namespace YNL.SimpleAISystem.Editors
             _isAction = isAction;
             _main = main;
 
-            this.AddStyle(_styleSheet, EAddress.USSFont).AddClass("Main");
+            this.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
 
             Title = new Label().AddClass("Title");
 

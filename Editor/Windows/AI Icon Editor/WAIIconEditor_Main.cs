@@ -1,7 +1,7 @@
 #if UNITY_EDITOR
 #if YNL_EDITOR
 #if YNL_UTILITIES
-using YNL.Editors.UIElements;
+using YNL.Editors.UIElements.Styled;
 using YNL.Editors.Windows;
 using YNL.Extensions.Methods;
 

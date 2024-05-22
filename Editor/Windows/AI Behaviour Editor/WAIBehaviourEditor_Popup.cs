@@ -40,7 +40,7 @@ namespace YNL.SimpleAISystem.Editors
 
         public void CreateMainGUI()
         {
-            this.rootVisualElement.AddStyle(_styleSheet, EAddress.USSFont).AddClass("Main");
+            this.rootVisualElement.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
 
             CloseButton = new Button().AddClass("CloseButton");
             CloseButton.clicked += this.Close;

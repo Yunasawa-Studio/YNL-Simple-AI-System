@@ -1,0 +1,13 @@
+.Main
+{
+	width: 100%;
+	height: 25px;
+}
+
+.Background
+{
+	background-color: #123456;
+
+	width: 100%;
+	height: 100%;
+}

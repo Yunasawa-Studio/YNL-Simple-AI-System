@@ -3,7 +3,7 @@
 #if YNL_UTILITIES
 using UnityEngine;
 using UnityEngine.UIElements;
-using YNL.Editors.UIElements;
+using YNL.Editors.UIElements.Styled;
 using YNL.Editors.Windows.Utilities;
 using YNL.Extensions.Methods;
 
@@ -46,7 +46,7 @@ namespace YNL.SimpleAISystem.Editors
         {
             _windowTitlePanel = new EWindowTitle(_windowIcon.LoadResource<Texture2D>(), _windowTitle, _windowSubtitle).AddClass("WindowTitle");
 
-            this.AddStyle("Style Sheets/AI Icon Editor/WAIIconEditor", EAddress.USSFont).AddClass("Main");
+            this.AddStyle("Style Sheets/AI Icon Editor/WAIIconEditor", EStyleSheet.Font).AddClass("Main");
         }
 
         private void MainWindowHandler()

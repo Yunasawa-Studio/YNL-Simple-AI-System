@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 using YNL.Editors.Windows.Utilities;
-using YNL.Editors.UIElements;
+using YNL.Editors.UIElements.Styled;
 using YNL.Extensions.Methods;
 
 namespace YNL.SimpleAISystem.Editors
@@ -28,7 +28,7 @@ namespace YNL.SimpleAISystem.Editors
 
         public EStateBox(EStatePanel panel, AIStateKey state) : base()
         {
-            this.AddStyle(_styleSheet, EAddress.USSFont).AddClass("Main");
+            this.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
 
             Texture2D icon = $"Scriptable Objects/AI Icon".LoadResource<EAIIcon>().StateIcons.Find(i => i.Label == state.Name)?.Icon;
             if (icon.IsNull()) icon = "Textures/Behaviours/Null".LoadResource<Texture2D>();

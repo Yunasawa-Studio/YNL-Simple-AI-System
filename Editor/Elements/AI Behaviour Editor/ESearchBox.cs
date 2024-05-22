@@ -4,7 +4,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using YNL.Editors.Windows.Utilities;
-using YNL.Editors.UIElements;
+using YNL.Editors.UIElements.Styled;
 using YNL.Extensions.Methods;
 
 namespace YNL.SimpleAISystem.Editors
@@ -25,7 +25,7 @@ namespace YNL.SimpleAISystem.Editors
         {
             Label = label;
 
-            this.AddStyle(_styleSheet, EAddress.USSFont).SetName("Root").AddClass("MainA");
+            this.AddStyle(_styleSheet, EStyleSheet.Font).SetName("Root").AddClass("MainA");
 
             TagIcon = new Image().AddClass("TagIcon");
             if (isAction) TagIcon.SetBackgroundImage("Textures/Icons/Tag");

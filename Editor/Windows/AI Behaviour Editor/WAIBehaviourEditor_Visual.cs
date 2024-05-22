@@ -3,7 +3,7 @@
 #if YNL_UTILITIES
 using UnityEngine;
 using UnityEngine.UIElements;
-using YNL.Editors.UIElements;
+using YNL.Editors.UIElements.Styled;
 using YNL.Editors.Windows.Utilities;
 using YNL.Extensions.Methods;
 
@@ -62,6 +62,11 @@ namespace YNL.SimpleAISystem.Editors
             this.AddElements(_handlerWindow, _windowTitlePanel, _propertyPanel);
         }
 
+        public void OnGUI()
+        {
+            ReferencedBehaviour.OnGUI();
+        }
+
         private void CreateElements()
         {
             _windowTitlePanel = new EWindowTitle(_windowIcon.LoadResource<Texture2D>(), _windowTitle, _windowSubtitle).AddClass(_uss_windowTitlePanel);
@@ -77,7 +82,7 @@ namespace YNL.SimpleAISystem.Editors
             _propertyPanel = new EInteractableImage().AddClass(_uss_propertyPanel).AddElements(_behaviourPanel, new ELine(ELineMode.Horizontal));
             _propertyPanel.AddElements(new Label("AI State").AddClass("StateTitle"), StatePanel);
 
-            this.AddStyle(_uss_styleSheet, EAddress.USSFont).AddClass(_uss_main);
+            this.AddStyle(_uss_styleSheet, EStyleSheet.Font).AddClass(_uss_main);
         }
 
         private void PanelMarginHandler()

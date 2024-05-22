@@ -27,7 +27,7 @@ namespace YNL.SimpleAISystem.Editors
 
         public EStatePanel(string[] states, AIBehaviour behaviour) : base()
         {
-            this.AddStyle(_styleSheet, EAddress.USSFont).AddClass("Main");
+            this.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
 
             Scroll = new ScrollView().AddClass("Scroll");
             AddButton = new Button().SetText("Add State").AddClass("Add");

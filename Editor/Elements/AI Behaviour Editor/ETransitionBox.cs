@@ -8,7 +8,7 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
 using YNL.Editors.Windows.Utilities;
-using YNL.Editors.UIElements;
+using YNL.Editors.UIElements.Styled;
 using YNL.Editors.Windows;
 using YNL.Extensions.Methods;
 using YNL.Utilities.Addons;
@@ -49,7 +49,7 @@ namespace YNL.SimpleAISystem.Editors
             ReferencedProperties = _key.Properties;
             _availableState = _states.Select(i => i.Name).ToList();
 
-            this.AddStyle(_styleSheet, EAddress.USSFont).SetName("Root").AddClass("Main");
+            this.AddStyle(_styleSheet, EStyleSheet.Font).SetName("Root").AddClass("Main");
 
             TagIcon = new Image().AddClass("TagIcon").SetBackgroundImage($"Textures/Icons/Decision");
             _icon = $"Scriptable Objects/AI Icon".LoadResource<EAIIcon>().DecisionIcons.Find(i => i.Label == _key.Label)?.Icon;
