@@ -11,13 +11,13 @@ namespace YNL.SimpleAISystem.Editors
     {
         private const string _styleSheet = "Style Sheets/AI Icon Editor/Elements/EIconBox";
 
-        public EInteractableImage Background;
+        public StyledInteractableImage Background;
 
         public EIconBox()
         {
             this.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
 
-            Background = new EInteractableImage().AddClass("Background");
+            Background = new StyledInteractableImage().AddClass("Background");
 
             this.AddElements(Background);
         }

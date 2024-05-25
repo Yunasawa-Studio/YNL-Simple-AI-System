@@ -13,7 +13,7 @@ namespace YNL.SimpleAISystem.Editors
     {
         private const string _styleSheet = "Style Sheets/AI Behaviour Editor/Elements/ESearchBox";
 
-        public EInteractableImage Background;
+        public StyledInteractableImage Background;
 
         public Image TagIcon;
         public Label Title;
@@ -35,7 +35,7 @@ namespace YNL.SimpleAISystem.Editors
 
             Title = new Label(label.AddSpaces()).AddClass("Title");
 
-            Background = new EInteractableImage().AddClass("Background").AddElements(TagIcon, Title);
+            Background = new StyledInteractableImage().AddClass("Background").AddElements(TagIcon, Title);
 
             this.AddElements(Background);
         }

@@ -10,7 +10,7 @@ using YNL.Extensions.Methods;
 
 namespace YNL.SimpleAISystem.Editors
 {
-    public class EStateBox : EInteractableButton
+    public class EStateBox : StyledInteractableButton
     {
         private const string _styleSheet = "Style Sheets/AI Behaviour Editor/Elements/EStateBox";
 

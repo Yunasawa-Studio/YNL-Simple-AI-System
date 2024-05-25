@@ -18,10 +18,10 @@ namespace YNL.SimpleAISystem.Editors
         private const string _styleSheet = "Style Sheets/AI Behaviour Editor/Elements/EActionBox";
 
         public Image LabelBackground;
-        public EInteractableImage TitleBackground;
+        public StyledInteractableImage TitleBackground;
         public Image TagIcon;
         public Label Title;
-        public EInteractableImage Expander;
+        public StyledInteractableImage Expander;
         public ScrollView Properties;
         public Button Delete;
 
@@ -47,12 +47,12 @@ namespace YNL.SimpleAISystem.Editors
 
             Title = new Label(_key.Label.AddSpaces()).AddClass("Title");
 
-            TitleBackground = new EInteractableImage().AddClass("TitleBackground").AddElements(TagIcon, Title);
+            TitleBackground = new StyledInteractableImage().AddClass("TitleBackground").AddElements(TagIcon, Title);
             TitleBackground.OnPointerEnter += () => OnPointerHoverTitlePanel(true);
             TitleBackground.OnPointerExit += () => OnPointerHoverTitlePanel(false);
             TitleBackground.OnPointerDown += () => WAIBehaviourEditor_Popup.Open(300, 200, WPopupPivot.TopLeft, true, this);
 
-            Expander = new EInteractableImage().AddClass("Expander");
+            Expander = new StyledInteractableImage().AddClass("Expander");
             Expander.OnPointerDown += ExpandView;
 
             Delete = new Button().AddClass("Delete");

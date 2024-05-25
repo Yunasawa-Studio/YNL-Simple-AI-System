@@ -20,13 +20,13 @@ namespace YNL.SimpleAISystem.Editors
         private const string _styleSheet = "Style Sheets/AI Behaviour Editor/Elements/ETransitionBox";
 
         public Image LabelBackground;
-        public EInteractableImage TitleBackground;
+        public StyledInteractableImage TitleBackground;
         public Image TagIcon;
         public Label Title;
-        public EInteractableImage Expander;
+        public StyledInteractableImage Expander;
         public Image TransitionBackground;
-        public EStringEnumField TrueTransition;
-        public EStringEnumField FalseTransition;
+        public StyledStringEnumField TrueTransition;
+        public StyledStringEnumField FalseTransition;
         public ScrollView Properties;
         public Button Delete;
 
@@ -57,12 +57,12 @@ namespace YNL.SimpleAISystem.Editors
 
             Title = new Label(_key.Label.AddSpaces()).AddClass("Title");
 
-            TitleBackground = new EInteractableImage().AddClass("TitleBackground").AddElements(TagIcon, Title);
+            TitleBackground = new StyledInteractableImage().AddClass("TitleBackground").AddElements(TagIcon, Title);
             TitleBackground.OnPointerEnter += () => OnPointerHoverTitlePanel(true);
             TitleBackground.OnPointerExit += () => OnPointerHoverTitlePanel(false);
             TitleBackground.OnPointerDown += () => WAIBehaviourEditor_Popup.Open(300, 200, WPopupPivot.TopLeft, false, this);
 
-            Expander = new EInteractableImage().AddClass("Expander");
+            Expander = new StyledInteractableImage().AddClass("Expander");
             Expander.OnPointerDown += ExpandView;
 
             Delete = new Button().AddClass("Delete");
@@ -142,8 +142,8 @@ namespace YNL.SimpleAISystem.Editors
 
         private void CreateTrueFalse()
         {
-            TrueTransition = new EStringEnumField("True", _availableState, (@true) => _key.True = FixSelectedState(@true), _key.True).AddClass("TransitionLabel", "TransitionField");
-            FalseTransition = new EStringEnumField("False", _availableState, (@false) => _key.False = FixSelectedState(@false), _key.False).AddClass("TransitionLabel", "TransitionField");
+            TrueTransition = new StyledStringEnumField("True", _availableState, (@true) => _key.True = FixSelectedState(@true), _key.True).AddClass("TransitionLabel", "TransitionField");
+            FalseTransition = new StyledStringEnumField("False", _availableState, (@false) => _key.False = FixSelectedState(@false), _key.False).AddClass("TransitionLabel", "TransitionField");
             TransitionBackground.Clear();
             TransitionBackground.AddElements(TrueTransition, FalseTransition);
         }

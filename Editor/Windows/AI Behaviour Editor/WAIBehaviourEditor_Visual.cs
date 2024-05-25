@@ -19,12 +19,12 @@ namespace YNL.SimpleAISystem.Editors
         #region ▶ Visual Elements
         private WAIBehaviourEditor_Main _main;
 
-        private EWindowTitle _windowTitlePanel;
-        private EWindowTagPanel _tagPanel;
+        private StyledWindowTitle _windowTitlePanel;
+        private StyledWindowTagPanel _tagPanel;
 
-        private EInteractableImage _propertyPanel;
+        private StyledInteractableImage _propertyPanel;
         private Image _behaviourPanel;
-        public EAssetField<AIBehaviour> ReferencedBehaviour;
+        public StyledAssetField<AIBehaviour> ReferencedBehaviour;
         public EStatePanel StatePanel;
 
         private VisualElement _handlerWindow;
@@ -49,7 +49,7 @@ namespace YNL.SimpleAISystem.Editors
         private float _tagPanelWidth = 200;
         #endregion
 
-        public WAIBehaviourEditor_Visual(EWindowTagPanel tagPanel, WAIBehaviourEditor_Main main) : base()
+        public WAIBehaviourEditor_Visual(StyledWindowTagPanel tagPanel, WAIBehaviourEditor_Main main) : base()
         {
             _tagPanel = tagPanel;
             _main = main;
@@ -69,9 +69,9 @@ namespace YNL.SimpleAISystem.Editors
 
         private void CreateElements()
         {
-            _windowTitlePanel = new EWindowTitle(_windowIcon.LoadResource<Texture2D>(), _windowTitle, _windowSubtitle).AddClass(_uss_windowTitlePanel);
+            _windowTitlePanel = new StyledWindowTitle(_windowIcon.LoadResource<Texture2D>(), _windowTitle, _windowSubtitle).AddClass(_uss_windowTitlePanel);
 
-            ReferencedBehaviour = new EAssetField<AIBehaviour>().AddClass(_uss_referencedBehaviour);
+            ReferencedBehaviour = new StyledAssetField<AIBehaviour>().AddClass(_uss_referencedBehaviour);
             ReferencedBehaviour.Background.OnDragPerform += _main.Handler.OnChangeBehaviour;
 
             _behaviourPanel = new Image().AddClass(_uss_behaviourPanel).AddElements(ReferencedBehaviour);
@@ -79,7 +79,7 @@ namespace YNL.SimpleAISystem.Editors
             StatePanel = new EStatePanel(new string[0], null);
             StatePanel.OnSelectState += _main.Handler.OnChangeState;
 
-            _propertyPanel = new EInteractableImage().AddClass(_uss_propertyPanel).AddElements(_behaviourPanel, new ELine(ELineMode.Horizontal));
+            _propertyPanel = new StyledInteractableImage().AddClass(_uss_propertyPanel).AddElements(_behaviourPanel, new StyledLine(ELineMode.Horizontal));
             _propertyPanel.AddElements(new Label("AI State").AddClass("StateTitle"), StatePanel);
 
             this.AddStyle(_uss_styleSheet, EStyleSheet.Font).AddClass(_uss_main);

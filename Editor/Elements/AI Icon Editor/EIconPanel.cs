@@ -12,7 +12,7 @@ namespace YNL.SimpleAISystem.Editors
     {
         private const string _styleSheet = "Style Sheets/AI Icon Editor/Elements/EIconPanel";
 
-        public EInteractableAssetsField<Texture2D> Wrapper;
+        public StyledInteractableAssetsField<Texture2D> Wrapper;
         public ScrollView Scroll;
         public EIconBox Box;
 

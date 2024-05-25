@@ -19,8 +19,8 @@ namespace YNL.SimpleAISystem.Editors
         #region ▶ Visual Elements
         private WAIIconEditor_Main _main;
 
-        private EWindowTitle _windowTitlePanel;
-        private EWindowTagPanel _tagPanel;
+        private StyledWindowTitle _windowTitlePanel;
+        private StyledWindowTagPanel _tagPanel;
 
         private VisualElement _handlerWindow;
         private Image _mainWindow;
@@ -29,7 +29,7 @@ namespace YNL.SimpleAISystem.Editors
         private float _tagPanelWidth = 200;
         #endregion
 
-        public WAIIconEditor_Visual(EWindowTagPanel tagPanel, WAIIconEditor_Main main) : base()
+        public WAIIconEditor_Visual(StyledWindowTagPanel tagPanel, WAIIconEditor_Main main) : base()
         {
             _tagPanel = tagPanel;
             _main = main;
@@ -44,7 +44,7 @@ namespace YNL.SimpleAISystem.Editors
 
         private void CreateElements()
         {
-            _windowTitlePanel = new EWindowTitle(_windowIcon.LoadResource<Texture2D>(), _windowTitle, _windowSubtitle).AddClass("WindowTitle");
+            _windowTitlePanel = new StyledWindowTitle(_windowIcon.LoadResource<Texture2D>(), _windowTitle, _windowSubtitle).AddClass("WindowTitle");
 
             this.AddStyle("Style Sheets/AI Icon Editor/WAIIconEditor", EStyleSheet.Font).AddClass("Main");
         }

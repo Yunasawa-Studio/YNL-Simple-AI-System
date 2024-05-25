@@ -14,7 +14,7 @@ namespace YNL.SimpleAISystem.Editors
 
         public EAIIcon Icon;
 
-        public WAIIconEditor_Main(EWindowTagPanel tagPanel) : base()
+        public WAIIconEditor_Main(StyledWindowTagPanel tagPanel) : base()
         {
             Icon = "Scriptable Objects/AI Icon".LoadResource<EAIIcon>();
 

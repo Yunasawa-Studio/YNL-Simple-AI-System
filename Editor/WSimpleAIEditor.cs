@@ -20,7 +20,7 @@ namespace YNL.SimpleAISystem.Editors
         public WAIBehaviourEditor_Main AIBehaviourEditor;
         public WAIIconEditor_Main AIIconEditor;
 
-        public EWindowTagPanel WindowTagPanel;
+        public StyledWindowTagPanel WindowTagPanel;
         #endregion
 
         #region ▶ General Fields/Properties
@@ -55,11 +55,11 @@ namespace YNL.SimpleAISystem.Editors
 
             Texture2D waitIcon = "Textures/Icons/Time1".LoadResource<Texture2D>();
 
-            WindowTagPanel = new(windowIcon, "Simple AI", "Editor Center", _tagPanelWidth, new EWindowTag[]
+            WindowTagPanel = new(windowIcon, "Simple AI", "Editor Center", _tagPanelWidth, new StyledWindowTag[]
             {
-                new EWindowTag(aiBehaviourIcon, "AI Behaviour Editor", "Simple AI", Color.white, _tagPanelWidth - 15, () => SwitchWindow(WRPGWindowTag.AIBehaviour)),
-                new EWindowTag(aiIconIcon, "AI Icon Editor", "Simple AI", Color.white, _tagPanelWidth - 15, () => SwitchWindow(WRPGWindowTag.AIIcon)),
-                new EWindowTag(waitIcon, "Coming Soon", "", Color.white, _tagPanelWidth - 15, () => SwitchWindow(WRPGWindowTag.C))
+                new StyledWindowTag(aiBehaviourIcon, "AI Behaviour Editor", "Simple AI", Color.white, _tagPanelWidth - 15, () => SwitchWindow(WRPGWindowTag.AIBehaviour)),
+                new StyledWindowTag(aiIconIcon, "AI Icon Editor", "Simple AI", Color.white, _tagPanelWidth - 15, () => SwitchWindow(WRPGWindowTag.AIIcon)),
+                new StyledWindowTag(waitIcon, "Coming Soon", "", Color.white, _tagPanelWidth - 15, () => SwitchWindow(WRPGWindowTag.C))
             });
 
             AIBehaviourEditor = new WAIBehaviourEditor_Main(WindowTagPanel);

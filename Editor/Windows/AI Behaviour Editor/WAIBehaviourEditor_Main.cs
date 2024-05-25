@@ -17,7 +17,7 @@ namespace YNL.SimpleAISystem.Editors
 
         public EAIReference Reference;
 
-        public WAIBehaviourEditor_Main(EWindowTagPanel tagPanel) : base()
+        public WAIBehaviourEditor_Main(StyledWindowTagPanel tagPanel) : base()
         {
             Handler = new(this);
             Visual = new(tagPanel, this);
