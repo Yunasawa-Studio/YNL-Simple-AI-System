@@ -1,5 +1,5 @@
 <h1><div align="center"> Yunasawa の Library - Simple AI System </div></h1>
-<h4><div align="center"><i> An extension package provides you a simple AI system to handle a medium amount of objects. </i></div></h4>
+<h4><div align="center"><i> Implement basic AI behaviors effortlessly using this straightforward toolkit. It’s designed to handle object behaviors and interactions. </i></div></h4>
 
 <p align="center">
  <img src="https://img.shields.io/badge/Script-DOCUMENTATION-blue.svg" alt="script">
