@@ -24,7 +24,7 @@ namespace YNL.SimpleAISystem.Editors
         {
             _root = new VisualElement();
 
-            _root.AddStyle("Style Sheets/AudioBarrier").SetAsFlexInsppector();
+            _root.SetAsFlexInsppector();
 
             _root.AddElements(new FlexComponentHeader()
                 .SetGlobalColor("#8FF2FF")
