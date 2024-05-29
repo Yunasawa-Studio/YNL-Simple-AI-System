@@ -12,4 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee765f67661ed44da870bebe9175412, type: 3}
   m_Name: Sample Behaviour
   m_EditorClassIdentifier: 
-  StateKeys: []
+  StateKeys:
+  - Name: Idle
+    Actions:
+    - Label: DoNothing
+      Properties:
+        _keys: []
+        _values: []
+    Transitions:
+    - Label: DistanceToTarget
+      True: Walk
+      False: 
+      Properties:
+        _keys:
+        - Comparison
+        - Distance
+        _values:
+        - Greater
+        - 5
+  - Name: Walk
+    Actions:
+    - Label: PlayAnimation
+      Properties:
+        _keys:
+        - Animation
+        - PlayMode
+        _values:
+        - Walk
+        - Harsh
+    Transitions:
+    - Label: TimeInState
+      True: Idle
+      False: 
+      Properties:
+        _keys:
+        - UsingAnimationTime
+        - LimitTime
+        _values:
+        - False
+        - 5

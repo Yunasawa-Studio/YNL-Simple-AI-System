@@ -1,7 +1,6 @@
 #if YNL_UTILITIES
 using YNL.Extensions.Methods;
 using YNL.Utilities.Addons;
-using YNL.Utility.Extension.Method;
 
 namespace YNL.SimpleAISystem
 {

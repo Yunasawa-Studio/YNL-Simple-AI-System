@@ -28,7 +28,7 @@ namespace YNL.SimpleAISystem.Editors
 
         public static void ShowWindow(AIBehaviour behaviour)
         {
-            WSimpleAIEditor window = EditorWindow.GetWindow<WSimpleAIEditor>("Editor RPG Center");
+            WSimpleAIEditor window = EditorWindow.GetWindow<WSimpleAIEditor>("Simple AI Editor");
             Texture2D texture = WSimpleAIEditor.WindowIconPath.LoadResource<Texture2D>();
 
             window.SwitchWindow(WRPGWindowTag.AIBehaviour);
