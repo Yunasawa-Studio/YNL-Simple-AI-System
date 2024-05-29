@@ -6,7 +6,7 @@ namespace YNL.SimpleAISystem
 {
     public class AIActionPlayAnimation : AIAction
     {
-        public AIActionPlayAnimation() : base(null) { }
+        public AIActionPlayAnimation() : base() { }
         public AIActionPlayAnimation(AIController controller) : base(controller) { }
 
         public string Animation = "";

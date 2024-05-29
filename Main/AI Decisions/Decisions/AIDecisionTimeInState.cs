@@ -8,7 +8,7 @@ namespace YNL.SimpleAISystem
 {
     public class AIDecisionTimeInState : AIDecision
     {
-        public AIDecisionTimeInState() : base(null) { }
+        public AIDecisionTimeInState() : base() { }
         public AIDecisionTimeInState(AIController controller) : base(controller) { }
 
         private Animator _animator;

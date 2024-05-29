@@ -8,6 +8,7 @@ namespace YNL.SimpleAISystem
         protected AIController _controller;
         public bool InProgress { get; set; }
 
+        public AIAction() { }
         public AIAction(AIController controller)
         {
             Initialize(controller);

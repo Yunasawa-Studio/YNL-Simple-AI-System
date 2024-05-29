@@ -7,7 +7,7 @@ namespace YNL.SimpleAISystem
 {
     public class AIDecisionDistanceToTarget : AIDecision
     {
-        public AIDecisionDistanceToTarget() : base(null) { }
+        public AIDecisionDistanceToTarget() : base() { }
         public AIDecisionDistanceToTarget(AIController controller) : base(controller) { }
 
         [Tooltip("Type of comparisons")] public NotEqualComparison Comparison = NotEqualComparison.Greater;

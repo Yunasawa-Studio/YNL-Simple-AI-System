@@ -6,7 +6,7 @@ namespace YNL.SimpleAISystem
 {
     public class AIActionLookAtTarget : AIAction
     {
-        public AIActionLookAtTarget() : base(null) { }
+        public AIActionLookAtTarget() : base() { }
         public AIActionLookAtTarget(AIController controller) : base(controller) { }
 
         public AILookAtTargetType LookAtType = AILookAtTargetType.OnUpdate;

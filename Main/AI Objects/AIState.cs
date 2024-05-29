@@ -15,8 +15,6 @@ namespace YNL.SimpleAISystem
 
         public void Initialize(AIController controller)
         {
-            MDebug.Notify("ASDASDASD");
-
             _controller = controller;
             foreach (var action in Actions) action.Initialize(controller);
             foreach (var transition in Transitions) transition.Decision.Initialize(controller);
