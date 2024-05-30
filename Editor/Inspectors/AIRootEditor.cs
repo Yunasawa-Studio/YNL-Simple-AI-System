@@ -1,5 +1,6 @@
 #if UNITY_EDITOR && YNL_EDITOR
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 using YNL.Editors.UIElements.Flexs;
 using YNL.Editors.Windows.Utilities;
@@ -30,7 +31,10 @@ namespace YNL.SimpleAISystem.Editors
                 .SetGlobalColor("#8FF2FF")
                 .AddIcon("Icons/AI Root", MAddressType.Resources)
                 .AddTitle("AI Root")
-                .AddDocumentation("https://github.com/Yunasawa-Studio/YNL-Simple-AI-System"));
+                .AddDocumentation("https://github.com/Yunasawa-Studio/YNL-Simple-AI-System")
+                .AddBottomSpace(10));
+
+            InspectorElement.FillDefaultInspector(_root, serializedObject, this);
         }
     }
 }
