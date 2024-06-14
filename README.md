@@ -8,6 +8,9 @@
  <img src="https://img.shields.io/badge/Version-2022.3-orange.svg" alt="version">
 </p>
 
+<img width=100% src="https://github.com/Yunasawa-Studio/YNL-Simple-AI-System/assets/113672166/4b17184a-f8e8-4a9d-9a61-b29509a7e0ab" alt="script">
+
+
 <h2> ★ About </h2>
 
 A product made by Yunasawa Studio, provides you a simple AI system and an easy-use Editor to work with. <br>
