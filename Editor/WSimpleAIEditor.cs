@@ -4,9 +4,9 @@
 using UnityEditor;
 using UnityEngine;
 using YNL.Editors.UIElements.Styled;
-using YNL.Editors.Windows.Utilities;
-using YNL.Editors.Windows;
 using YNL.Extensions.Methods;
+using YNL.Editors.Windows;
+using YNL.Editors.Windows.Utilities;
 
 namespace YNL.SimpleAISystem.Editors
 {

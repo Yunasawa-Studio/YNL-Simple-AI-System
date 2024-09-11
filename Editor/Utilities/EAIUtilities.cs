@@ -4,8 +4,8 @@
 using System.Reflection;
 using System;
 using UnityEngine.UIElements;
-using YNL.Editors.Windows.Utilities;
 using YNL.Extensions.Methods;
+using YNL.Editors.Windows.Utilities;
 
 namespace YNL.SimpleAISystem.Editors
 {
@@ -42,7 +42,7 @@ namespace YNL.SimpleAISystem.Editors
             else if (typeof(T).IsEnum)
             {
                 element = new EnumField(label, (Enum)Activator.CreateInstance(typeof(T))).AddClass(style);
-                (element as EnumField).value = (Enum)Convert.ChangeType(EUtilities.EParse<T>(value), typeof(Enum));
+                (element as EnumField).value = (Enum)Convert.ChangeType(MEnum.Parse<T>(value), typeof(Enum));
                 (element as EnumField).RegisterValueChangedCallback(evt => valueChanged?.Invoke((T)Convert.ChangeType(evt.newValue, typeof(T))));
             }
             else element = new Image();

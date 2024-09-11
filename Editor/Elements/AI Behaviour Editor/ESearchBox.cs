@@ -3,9 +3,9 @@
 #if YNL_UTILITIES
 using UnityEngine;
 using UnityEngine.UIElements;
-using YNL.Editors.Windows.Utilities;
-using YNL.Editors.UIElements.Styled;
 using YNL.Extensions.Methods;
+using YNL.Editors.UIElements.Styled;
+using YNL.Editors.Windows.Utilities;
 
 namespace YNL.SimpleAISystem.Editors
 {

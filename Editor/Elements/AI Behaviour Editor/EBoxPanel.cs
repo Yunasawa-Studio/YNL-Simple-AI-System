@@ -2,9 +2,9 @@
 #if YNL_EDITOR
 #if YNL_UTILITIES
 using UnityEngine.UIElements;
-using YNL.Editors.Windows.Utilities;
-using YNL.Editors.Windows;
 using YNL.Extensions.Methods;
+using YNL.Editors.Windows;
+using YNL.Editors.Windows.Utilities;
 
 namespace YNL.SimpleAISystem.Editors
 {

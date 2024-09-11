@@ -7,10 +7,10 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
-using YNL.Editors.Windows.Utilities;
+using YNL.Extensions.Methods;
 using YNL.Editors.UIElements.Styled;
 using YNL.Editors.Windows;
-using YNL.Extensions.Methods;
+using YNL.Editors.Windows.Utilities;
 using YNL.Utilities.Addons;
 
 namespace YNL.SimpleAISystem.Editors
@@ -78,13 +78,13 @@ namespace YNL.SimpleAISystem.Editors
             this.AddElements(LabelBackground, TransitionBackground, Properties);
             this.RegisterCallback<DetachFromPanelEvent>(OnDetachedFromPanel);
 
-            WAIBehaviourEditor_Action.AddState += OnStateAdded;
+            WAIBehaviourEditor_Action.AddState += OnStatAdded;
             WAIBehaviourEditor_Action.RemoveState += OnStateRemoved;
         }
 
         public void OnDetachedFromPanel(DetachFromPanelEvent evt)
         {
-            WAIBehaviourEditor_Action.AddState -= OnStateAdded;
+            WAIBehaviourEditor_Action.AddState -= OnStatAdded;
             WAIBehaviourEditor_Action.RemoveState -= OnStateRemoved;
         }
 
@@ -148,7 +148,7 @@ namespace YNL.SimpleAISystem.Editors
             TransitionBackground.Clear();
             TransitionBackground.AddElements(TrueTransition, FalseTransition);
         }
-        private void OnStateAdded(AIStateKey key)
+        private void OnStatAdded(AIStateKey key)
         {
             _availableState.Add(key.Name);
             CreateTrueFalse();
