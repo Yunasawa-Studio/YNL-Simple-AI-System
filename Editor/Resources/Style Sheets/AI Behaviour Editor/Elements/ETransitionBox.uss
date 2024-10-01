@@ -55,7 +55,7 @@
 
 	margin: 0px;
 
-	background-image: resource("Textures/Icons/X");
+	background-image: resource("Textures (Obsoleted)/Icons/X");
 	background-size: 75%;
 
 	transition-property: height, -unity-background-image-tint-color;
@@ -77,7 +77,7 @@
 	border-color: transparent;
 	border-left-color: #404040;
 
-	background-image: resource("Textures/Icons/Arrow2 - Down");
+	background-image: resource("Textures (Obsoleted)/Icons/Arrow2 - Down");
 	background-size: 75%;
 
 	width: 20px;
@@ -94,7 +94,7 @@
 {
 	background-color: #1a1a1a;
 
-	background-image: resource("Textures/Icons/Arrow1 - Down");
+	background-image: resource("Textures (Obsoleted)/Icons/Arrow1 - Down");
 	background-size: 60%;
 }
 .Expander__HoverOnTitle
@@ -108,13 +108,13 @@
 }
 .Expander__OnExpand
 {
-	background-image: resource("Textures/Icons/Arrow2 - Up");
+	background-image: resource("Textures (Obsoleted)/Icons/Arrow2 - Up");
 }
 .Expander__OnExpand:hover
 {
 	background-color: #1a1a1a;
 
-	background-image: resource("Textures/Icons/Arrow1 - Up");
+	background-image: resource("Textures (Obsoleted)/Icons/Arrow1 - Up");
 	background-size: 60%;
 }
 .Expander__HoverOnTitle__OnExpand

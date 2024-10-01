@@ -5,10 +5,9 @@ using System;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
-using YNL.Editors.UIElements.Styled;
-using YNL.Editors.Windows;
+using YNL.Editors.Visuals;
 using YNL.Extensions.Methods;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Extensions;
 using YNL.Utilities.Addons;
 
 namespace YNL.SimpleAISystem.Editors
@@ -18,10 +17,10 @@ namespace YNL.SimpleAISystem.Editors
         private const string _styleSheet = "Style Sheets/AI Behaviour Editor/Elements/EActionBox";
 
         public Image LabelBackground;
-        public StyledInteractableImage TitleBackground;
+        public FlexibleInteractImage TitleBackground;
         public Image TagIcon;
         public Label Title;
-        public StyledInteractableImage Expander;
+        public FlexibleInteractImage Expander;
         public ScrollView Properties;
         public Button Delete;
 
@@ -39,7 +38,7 @@ namespace YNL.SimpleAISystem.Editors
             _key = actionKey;
             ReferencedProperties = _key.Properties;
 
-            this.AddStyle(_styleSheet, EStyleSheet.Font).SetName("Root").AddClass("Main");
+            this.AddStyle(_styleSheet, ESheet.Font).SetName("Root").AddClass("Main");
 
             TagIcon = new Image().AddClass("TagIcon").SetBackgroundImage($"Textures/Icons/Tag");
             _icon = $"Scriptable Objects/AI Icon".LoadResource<EAIIcon>().ActionIcons.Find(i => i.Label == _key.Label)?.Icon;
@@ -47,12 +46,12 @@ namespace YNL.SimpleAISystem.Editors
 
             Title = new Label(_key.Label.AddSpaces()).AddClass("Title");
 
-            TitleBackground = new StyledInteractableImage().AddClass("TitleBackground").AddElements(TagIcon, Title);
+            TitleBackground = new FlexibleInteractImage().AddClass("TitleBackground").AddElements(TagIcon, Title);
             TitleBackground.OnPointerEnter += () => OnPointerHoverTitlePanel(true);
             TitleBackground.OnPointerExit += () => OnPointerHoverTitlePanel(false);
-            TitleBackground.OnPointerDown += () => WAIBehaviourEditor_Popup.Open(300, 200, WPopupPivot.TopLeft, true, this);
+            TitleBackground.OnPointerDown += () => WAIBehaviourEditor_Popup.Open(true, this);
 
-            Expander = new StyledInteractableImage().AddClass("Expander");
+            Expander = new FlexibleInteractImage().AddClass("Expander");
             Expander.OnPointerDown += ExpandView;
 
             Delete = new Button().AddClass("Delete");
@@ -124,10 +123,10 @@ namespace YNL.SimpleAISystem.Editors
 
             ReferencedProperties = _key.Properties;
 
-            TagIcon.SetBackgroundImage($"Textures/Icons/Tag");
-            //_icon = $"Textures/Behaviours/Actions/{_key.Label}".LoadResource<Texture2D>();
+            TagIcon.SetBackgroundImage($"Textures (Obsoleted)/Icons/Tag");
+            //_icon = $"Textures (Obsoleted)/Behaviours/Actions/{_key.Label}".LoadResource<Texture2D>();
             _icon = $"Scriptable Objects/AI Icon".LoadResource<EAIIcon>().ActionIcons.Find(i => i.Label == _key.Label)?.Icon;
-            if (_icon.IsNull()) _icon = $"Textures/Behaviours/Null".LoadResource<Texture2D>();
+            if (_icon.IsNull()) _icon = $"Textures (Obsoleted)/Behaviours/Null".LoadResource<Texture2D>();
 
             Title.SetText(_key.Label.AddSpaces());
         }

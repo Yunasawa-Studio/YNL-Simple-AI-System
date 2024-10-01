@@ -8,9 +8,8 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
 using YNL.Extensions.Methods;
-using YNL.Editors.UIElements.Styled;
-using YNL.Editors.Windows;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Visuals;
+using YNL.Editors.Extensions;
 using YNL.Utilities.Addons;
 
 namespace YNL.SimpleAISystem.Editors
@@ -20,13 +19,13 @@ namespace YNL.SimpleAISystem.Editors
         private const string _styleSheet = "Style Sheets/AI Behaviour Editor/Elements/ETransitionBox";
 
         public Image LabelBackground;
-        public StyledInteractableImage TitleBackground;
+        public FlexibleInteractImage TitleBackground;
         public Image TagIcon;
         public Label Title;
-        public StyledInteractableImage Expander;
+        public FlexibleInteractImage Expander;
         public Image TransitionBackground;
-        public StyledStringEnumField TrueTransition;
-        public StyledStringEnumField FalseTransition;
+        public RepaintedStringEnumField TrueTransition;
+        public RepaintedStringEnumField FalseTransition;
         public ScrollView Properties;
         public Button Delete;
 
@@ -49,7 +48,7 @@ namespace YNL.SimpleAISystem.Editors
             ReferencedProperties = _key.Properties;
             _availableState = _states.Select(i => i.Name).ToList();
 
-            this.AddStyle(_styleSheet, EStyleSheet.Font).SetName("Root").AddClass("Main");
+            this.AddStyle(_styleSheet, ESheet.Font).SetName("Root").AddClass("Main");
 
             TagIcon = new Image().AddClass("TagIcon").SetBackgroundImage($"Textures/Icons/Decision");
             _icon = $"Scriptable Objects/AI Icon".LoadResource<EAIIcon>().DecisionIcons.Find(i => i.Label == _key.Label)?.Icon;
@@ -57,12 +56,12 @@ namespace YNL.SimpleAISystem.Editors
 
             Title = new Label(_key.Label.AddSpaces()).AddClass("Title");
 
-            TitleBackground = new StyledInteractableImage().AddClass("TitleBackground").AddElements(TagIcon, Title);
+            TitleBackground = new FlexibleInteractImage().AddClass("TitleBackground").AddElements(TagIcon, Title);
             TitleBackground.OnPointerEnter += () => OnPointerHoverTitlePanel(true);
             TitleBackground.OnPointerExit += () => OnPointerHoverTitlePanel(false);
-            TitleBackground.OnPointerDown += () => WAIBehaviourEditor_Popup.Open(300, 200, WPopupPivot.TopLeft, false, this);
+            TitleBackground.OnPointerDown += () => WAIBehaviourEditor_Popup.Open(false, this);
 
-            Expander = new StyledInteractableImage().AddClass("Expander");
+            Expander = new FlexibleInteractImage().AddClass("Expander");
             Expander.OnPointerDown += ExpandView;
 
             Delete = new Button().AddClass("Delete");
@@ -143,8 +142,8 @@ namespace YNL.SimpleAISystem.Editors
 
         private void CreateTrueFalse()
         {
-            TrueTransition = new StyledStringEnumField("True", _availableState, (@true) => _key.True = FixSelectedState(@true), _key.True).AddClass("TransitionLabel", "TransitionField");
-            FalseTransition = new StyledStringEnumField("False", _availableState, (@false) => _key.False = FixSelectedState(@false), _key.False).AddClass("TransitionLabel", "TransitionField");
+            TrueTransition = new RepaintedStringEnumField("True", _availableState, (@true) => _key.True = FixSelectedState(@true), _key.True).AddClass("TransitionLabel", "TransitionField");
+            FalseTransition = new RepaintedStringEnumField("False", _availableState, (@false) => _key.False = FixSelectedState(@false), _key.False).AddClass("TransitionLabel", "TransitionField");
             TransitionBackground.Clear();
             TransitionBackground.AddElements(TrueTransition, FalseTransition);
         }

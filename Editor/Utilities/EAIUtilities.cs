@@ -5,7 +5,7 @@ using System.Reflection;
 using System;
 using UnityEngine.UIElements;
 using YNL.Extensions.Methods;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
@@ -90,7 +90,7 @@ namespace YNL.SimpleAISystem.Editors
             }
             else
             {
-                MDebug.Caution($"Unsupported field type: {fieldType}");
+                Extensions.Methods.MDebug.Caution($"Unsupported field type: {fieldType}");
             }
 
             return element;

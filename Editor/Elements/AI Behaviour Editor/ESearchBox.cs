@@ -4,8 +4,8 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using YNL.Extensions.Methods;
-using YNL.Editors.UIElements.Styled;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Visuals;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
@@ -13,7 +13,7 @@ namespace YNL.SimpleAISystem.Editors
     {
         private const string _styleSheet = "Style Sheets/AI Behaviour Editor/Elements/ESearchBox";
 
-        public StyledInteractableImage Background;
+        public FlexibleInteractImage Background;
 
         public Image TagIcon;
         public Label Title;
@@ -25,7 +25,7 @@ namespace YNL.SimpleAISystem.Editors
         {
             Label = label;
 
-            this.AddStyle(_styleSheet, EStyleSheet.Font).SetName("Root").AddClass("MainA");
+            this.AddStyle(_styleSheet, ESheet.Font).SetName("Root").AddClass("MainA");
 
             TagIcon = new Image().AddClass("TagIcon");
             if (isAction) TagIcon.SetBackgroundImage("Textures/Icons/Tag");
@@ -35,7 +35,7 @@ namespace YNL.SimpleAISystem.Editors
 
             Title = new Label(label.AddSpaces()).AddClass("Title");
 
-            Background = new StyledInteractableImage().AddClass("Background").AddElements(TagIcon, Title);
+            Background = new FlexibleInteractImage().AddClass("Background").AddElements(TagIcon, Title);
 
             this.AddElements(Background);
         }

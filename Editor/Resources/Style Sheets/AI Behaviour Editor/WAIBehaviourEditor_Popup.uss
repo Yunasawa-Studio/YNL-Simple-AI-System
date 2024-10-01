@@ -30,7 +30,7 @@
 .CloseButton
 {
 	background-color: transparent;
-	background-image: resource("Textures/Icons/X");
+	background-image: resource("Textures (Obsoleted)/Icons/X");
 	background-size: 75%;
 
 	border-width: 0px;

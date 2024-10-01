@@ -3,16 +3,16 @@
 #if YNL_UTILITIES
 using UnityEngine;
 using UnityEngine.UIElements;
-using YNL.Editors.UIElements.Styled;
+using YNL.Editors.Visuals;
 using YNL.Extensions.Methods;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
     public class WAIIconEditor_Visual : VisualElement
     {
         #region ▶ Editor Contants
-        private const string _windowIcon = "Textures/Editors/Map";
+        private const string _windowIcon = "Textures (Obsoleted)/Editors/Map";
         private const string _windowTitle = "AI Icon Editor";
         private const string _windowSubtitle = "Editor tool for customizing AI Icons";
         #endregion
@@ -46,7 +46,7 @@ namespace YNL.SimpleAISystem.Editors
         {
             _windowTitlePanel = new StyledWindowTitle(_windowIcon.LoadResource<Texture2D>(), _windowTitle, _windowSubtitle).AddClass("WindowTitle");
 
-            this.AddStyle("Style Sheets/AI Icon Editor/WAIIconEditor", EStyleSheet.Font).AddClass("Main");
+            this.AddStyle("Style Sheets/AI Icon Editor/WAIIconEditor", ESheet.Font).AddClass("Main");
         }
 
         private void MainWindowHandler()
@@ -58,7 +58,7 @@ namespace YNL.SimpleAISystem.Editors
             EIconPanel panel2 = new();
             EIconPanel panel3 = new();
 
-            _mainWindow.AddElements(panel1).AddVSpace(15).AddElements(panel2).AddVSpace(15).AddElements(panel3);
+            _mainWindow.AddElements(panel1).AddHSpace(15).AddElements(panel2).AddHSpace(15).AddElements(panel3);
 
             _handlerWindow.AddElements(_mainWindow);
         }

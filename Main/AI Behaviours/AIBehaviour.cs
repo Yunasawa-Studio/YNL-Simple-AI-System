@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using YNL.Extensions.Methods;
 using YNL.Utilities.Addons;
 #if UNITY_EDITOR
+#if YNL_EDITOR
+using YNL.SimpleAISystem.Editors;
+#endif
 using UnityEditor.Callbacks;
 using UnityEditor;
-using YNL.SimpleAISystem.Editors;
 #endif
 using UnityEngine;
 
@@ -17,7 +19,7 @@ namespace YNL.SimpleAISystem
         public List<AIStateKey> StateKeys = new();
 
         #region ▶ Editor Methods
-#if UNITY_EDITOR
+#if UNITY_EDITOR && YNL_EDITOR
         [OnOpenAsset]
         public static bool OnOpenAsset(int instanceID)
         {

@@ -3,8 +3,8 @@
 #if YNL_UTILITIES
 using UnityEngine;
 using UnityEngine.UIElements;
-using YNL.Editors.UIElements.Styled;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Visuals;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
@@ -12,13 +12,13 @@ namespace YNL.SimpleAISystem.Editors
     {
         private const string _styleSheet = "Style Sheets/AI Icon Editor/Elements/EIconPanel";
 
-        public StyledInteractableAssetsField<Texture2D> Wrapper;
+        public FlexibleAssetsField<Texture2D> Wrapper;
         public ScrollView Scroll;
         public EIconBox Box;
 
         public EIconPanel()
         {
-            this.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
+            this.AddStyle(_styleSheet, ESheet.Font).AddClass("Main");
 
             //Wrapper = new EInteractableAssetsField<Texture2D>().AddClass("Wrapper");
             //Wrapper.OnDragEnter += OnDragEnter;

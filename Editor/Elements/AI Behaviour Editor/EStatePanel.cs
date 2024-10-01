@@ -6,7 +6,7 @@ using System.Linq;
 using UnityEngine.UIElements;
 using YNL.Extensions.Methods;
 using YNL.Editors.Windows;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
@@ -27,7 +27,7 @@ namespace YNL.SimpleAISystem.Editors
 
         public EStatePanel(string[] states, AIBehaviour behaviour) : base()
         {
-            this.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
+            this.AddStyle(_styleSheet, ESheet.Font).AddClass("Main");
 
             Scroll = new ScrollView().AddClass("Scroll");
             AddButton = new Button().SetText("Add State").AddClass("Add");
@@ -51,7 +51,7 @@ namespace YNL.SimpleAISystem.Editors
         {
             if (Behaviour.IsNull())
             {
-                WMessagePopup.Show("Select an AI Behaviour asset first!");
+                MessagePopup.Show("Select an AI Behaviour asset first!");
                 return;
             }
 

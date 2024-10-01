@@ -4,7 +4,7 @@
 using UnityEngine.UIElements;
 using YNL.Extensions.Methods;
 using YNL.Editors.Windows;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
@@ -25,7 +25,7 @@ namespace YNL.SimpleAISystem.Editors
             _isAction = isAction;
             _main = main;
 
-            this.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
+            this.AddStyle(_styleSheet, ESheet.Font).AddClass("Main");
 
             Title = new Label().AddClass("Title");
 
@@ -57,7 +57,7 @@ namespace YNL.SimpleAISystem.Editors
         {
             if (_main.Handler.Behaviour.IsNull())
             {
-                WMessagePopup.Show("Select an AI Behaviour asset first!");
+                MessagePopup.Show("Select an AI Behaviour asset first!");
                 return;
             }
 
@@ -66,7 +66,7 @@ namespace YNL.SimpleAISystem.Editors
                 AIActionKey key = new("...");
                 if (_main.Handler.CurrentStateKey.IsNull())
                 {
-                    MDebug.Caution("Please create or select one <b>State</b> before adding any <b>Action</b>");
+                    Extensions.Methods.MDebug.Caution("Please create or select one <b>State</b> before adding any <b>Action</b>");
                     return;
                 }
                 _main.Handler.CurrentStateKey.Actions.Add(key);
@@ -77,7 +77,7 @@ namespace YNL.SimpleAISystem.Editors
                 AITransitionKey key = new("...");
                 if (_main.Handler.CurrentStateKey.IsNull())
                 {
-                    MDebug.Caution("Please create or select one <b>State</b> before adding any <b>Transition</b>");
+                    Extensions.Methods.MDebug.Caution("Please create or select one <b>State</b> before adding any <b>Transition</b>");
                     return;
                 }
                 _main.Handler.CurrentStateKey.Transitions.Add(key);

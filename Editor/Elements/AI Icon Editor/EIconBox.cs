@@ -2,8 +2,8 @@
 #if YNL_EDITOR
 #if YNL_UTILITIES
 using UnityEngine.UIElements;
-using YNL.Editors.UIElements.Styled;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Visuals;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
@@ -11,13 +11,13 @@ namespace YNL.SimpleAISystem.Editors
     {
         private const string _styleSheet = "Style Sheets/AI Icon Editor/Elements/EIconBox";
 
-        public StyledInteractableImage Background;
+        public FlexibleInteractImage Background;
 
         public EIconBox()
         {
-            this.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
+            this.AddStyle(_styleSheet, ESheet.Font).AddClass("Main");
 
-            Background = new StyledInteractableImage().AddClass("Background");
+            Background = new FlexibleInteractImage().AddClass("Background");
 
             this.AddElements(Background);
         }

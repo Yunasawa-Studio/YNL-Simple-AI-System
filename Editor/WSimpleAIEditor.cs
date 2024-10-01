@@ -3,17 +3,17 @@
 #if YNL_UTILITIES
 using UnityEditor;
 using UnityEngine;
-using YNL.Editors.UIElements.Styled;
+using YNL.Editors.Visuals;
 using YNL.Extensions.Methods;
 using YNL.Editors.Windows;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
     public class WSimpleAIEditor : EditorWindow
     {
         #region ▶ Editor Asset Fields/Properties
-        public const string WindowIconPath = "Textures/Editors/Shield Bordered";
+        public const string WindowIconPath = "Textures (Obsoleted)/Editors/Shield Bordered";
         #endregion
 
         #region ▶ Visual Elements
@@ -29,7 +29,7 @@ namespace YNL.SimpleAISystem.Editors
         private IMain _selectedWindow;
         #endregion
 
-        [MenuItem("🔗 YのL/🔗 Windows/🔗 Simple AI Editor")]
+        [MenuItem("🔗 YのL/▷ YNL - Simple AI System/🎲 Editor Window")]
         public static void ShowWindow()
         {
             WSimpleAIEditor window = GetWindow<WSimpleAIEditor>("Simple AI Editor");
@@ -48,12 +48,12 @@ namespace YNL.SimpleAISystem.Editors
 
         public void CreateGUI()
         {
-            Texture2D windowIcon = "Textures/Editors/Shield".LoadResource<Texture2D>();
+            Texture2D windowIcon = "Textures (Obsoleted)/Editors/Shield".LoadResource<Texture2D>();
 
-            Texture2D aiBehaviourIcon = "Textures/Editors/Scroll1".LoadResource<Texture2D>();
-            Texture2D aiIconIcon = "Textures/Editors/Map".LoadResource<Texture2D>();
+            Texture2D aiBehaviourIcon = "Textures (Obsoleted)/Editors/Scroll1".LoadResource<Texture2D>();
+            Texture2D aiIconIcon = "Textures (Obsoleted)/Editors/Map".LoadResource<Texture2D>();
 
-            Texture2D waitIcon = "Textures/Icons/Time1".LoadResource<Texture2D>();
+            Texture2D waitIcon = "Textures (Obsoleted)/Icons/Time1".LoadResource<Texture2D>();
 
             WindowTagPanel = new(windowIcon, "Simple AI", "Editor Center", _tagPanelWidth, new StyledWindowTag[]
             {
@@ -96,6 +96,15 @@ namespace YNL.SimpleAISystem.Editors
     public enum WRPGWindowTag
     {
         AIBehaviour, AIIcon, C, D, E, F
+    }
+
+    public interface IMain
+    {
+        public virtual void OnSelectionChange() { }
+        public virtual void CreateGUI() { }
+        public virtual void OnGUI() { }
+
+        public virtual void OpenInstruction() { }
     }
 }
 #endif

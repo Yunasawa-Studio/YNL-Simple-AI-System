@@ -70,7 +70,7 @@
 .HandlerWindow
 {
 	-unity-background-image-tint-color: #565656;
-	background-image: resource("Textures/Backgrounds/Background 6");
+	background-image: resource("Textures (Obsoleted)/Backgrounds/Background 6");
 	background-size: auto;
 	border-color: transparent;
 	

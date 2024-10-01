@@ -2,8 +2,8 @@
     "name": "YNL.SimpleAISystem",
     "rootNamespace": "",
     "references": [
-        "GUID:abab9aefb71cafa4f868b11fbdbff08b",
-        "GUID:23c9a8ee6925f5c4da2810b5feac4cd6"
+        "GUID:23c9a8ee6925f5c4da2810b5feac4cd6",
+        "GUID:c5d96f17351c7f541827369c905e52f2"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

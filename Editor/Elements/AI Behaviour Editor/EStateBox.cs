@@ -5,12 +5,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 using YNL.Extensions.Methods;
-using YNL.Editors.UIElements.Styled;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Visuals;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
-    public class EStateBox : StyledInteractableButton
+    public class EStateBox : FlexibleInteractButton
     {
         private const string _styleSheet = "Style Sheets/AI Behaviour Editor/Elements/EStateBox";
 
@@ -28,7 +28,7 @@ namespace YNL.SimpleAISystem.Editors
 
         public EStateBox(EStatePanel panel, AIStateKey state) : base()
         {
-            this.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
+            this.AddStyle(_styleSheet, ESheet.Font).AddClass("Main");
 
             Texture2D icon = $"Scriptable Objects/AI Icon".LoadResource<EAIIcon>().StateIcons.Find(i => i.Label == state.Name)?.Icon;
             if (icon.IsNull()) icon = "Textures/Behaviours/Null".LoadResource<Texture2D>();

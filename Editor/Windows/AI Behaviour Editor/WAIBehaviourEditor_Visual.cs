@@ -3,9 +3,9 @@
 #if YNL_UTILITIES
 using UnityEngine;
 using UnityEngine.UIElements;
-using YNL.Editors.UIElements.Styled;
+using YNL.Editors.Visuals;
 using YNL.Extensions.Methods;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
@@ -22,9 +22,9 @@ namespace YNL.SimpleAISystem.Editors
         private StyledWindowTitle _windowTitlePanel;
         private StyledWindowTagPanel _tagPanel;
 
-        private StyledInteractableImage _propertyPanel;
+        private FlexibleInteractImage _propertyPanel;
         private Image _behaviourPanel;
-        public StyledAssetField<AIBehaviour> ReferencedBehaviour;
+        public RepaintedAssetField<AIBehaviour> ReferencedBehaviour;
         public EStatePanel StatePanel;
 
         private VisualElement _handlerWindow;
@@ -71,7 +71,7 @@ namespace YNL.SimpleAISystem.Editors
         {
             _windowTitlePanel = new StyledWindowTitle(_windowIcon.LoadResource<Texture2D>(), _windowTitle, _windowSubtitle).AddClass(_uss_windowTitlePanel);
 
-            ReferencedBehaviour = new StyledAssetField<AIBehaviour>().AddClass(_uss_referencedBehaviour);
+            ReferencedBehaviour = new RepaintedAssetField<AIBehaviour>().AddClass(_uss_referencedBehaviour);
             ReferencedBehaviour.Background.OnDragPerform += _main.Handler.OnChangeBehaviour;
 
             _behaviourPanel = new Image().AddClass(_uss_behaviourPanel).AddElements(ReferencedBehaviour);
@@ -79,10 +79,10 @@ namespace YNL.SimpleAISystem.Editors
             StatePanel = new EStatePanel(new string[0], null);
             StatePanel.OnSelectState += _main.Handler.OnChangeState;
 
-            _propertyPanel = new StyledInteractableImage().AddClass(_uss_propertyPanel).AddElements(_behaviourPanel, new StyledLine(ELineMode.Horizontal));
+            _propertyPanel = new FlexibleInteractImage().AddClass(_uss_propertyPanel).AddElements(_behaviourPanel, new FlexibleLine(FlexibleLine.Line.Horizontal));
             _propertyPanel.AddElements(new Label("AI State").AddClass("StateTitle"), StatePanel);
 
-            this.AddStyle(_uss_styleSheet, EStyleSheet.Font).AddClass(_uss_main);
+            this.AddStyle(_uss_styleSheet, ESheet.Font).AddClass(_uss_main);
         }
 
         private void PanelMarginHandler()

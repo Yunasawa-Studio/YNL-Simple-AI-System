@@ -7,7 +7,7 @@
 {
 	background-color: transparent;
 	border-color: transparent;
-	background-image: resource("Textures/Editors/Dash Box");
+	background-image: resource("Textures (Obsoleted)/Editors/Dash Box");
 	-unity-background-image-tint-color: #B3B3B3;
 
 	width: 100%;

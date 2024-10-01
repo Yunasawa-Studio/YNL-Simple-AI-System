@@ -6,12 +6,12 @@ using System.Linq;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 using YNL.Extensions.Methods;
-using YNL.Editors.Windows;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Visuals;
+using YNL.Editors.Extensions;
 
 namespace YNL.SimpleAISystem.Editors
 {
-    public class WAIBehaviourEditor_Popup : WPopupWindow<WAIBehaviourEditor_Popup>
+    public class WAIBehaviourEditor_Popup : PopupWindow<WAIBehaviourEditor_Popup>
     {
         private const string _styleSheet = "Style Sheets/AI Behaviour Editor/WAIBehaviourEditor_Popup";
 
@@ -29,6 +29,11 @@ namespace YNL.SimpleAISystem.Editors
 
         private List<string> _labelList = new();
 
+        public static void Open(params object[] parameters)
+        {
+            Show(parameters).CloseOnLostFocus().SetSize(300, 200).SetAnchor(true, PopupPivot.TopLeft);
+        }
+
         protected override void Initialize(params object[] parameters)
         {
             _isAction = (bool)parameters[0];
@@ -40,7 +45,7 @@ namespace YNL.SimpleAISystem.Editors
 
         public void CreateMainGUI()
         {
-            this.rootVisualElement.AddStyle(_styleSheet, EStyleSheet.Font).AddClass("Main");
+            this.rootVisualElement.AddStyle(_styleSheet, ESheet.Font).AddClass("Main");
 
             CloseButton = new Button().AddClass("CloseButton");
             CloseButton.clicked += this.Close;

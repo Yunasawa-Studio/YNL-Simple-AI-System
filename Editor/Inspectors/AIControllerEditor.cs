@@ -2,8 +2,8 @@
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
-using YNL.Editors.UIElements.Flexs;
-using YNL.Editors.Windows.Utilities;
+using YNL.Editors.Visuals;
+using YNL.Editors.Extensions;
 using YNL.Extensions.Addons;
 
 namespace YNL.SimpleAISystem.Editors
@@ -27,7 +27,7 @@ namespace YNL.SimpleAISystem.Editors
 
             _root.SetAsFlexInsppector();
 
-            _root.AddElements(new FlexComponentHeader()
+            _root.AddElements(new StyledComponentHeader()
                 .SetGlobalColor("#8FF2FF")
                 .AddIcon("Icons/AI Controller", MAddressType.Resources)
                 .AddTitle("AI Controller")
